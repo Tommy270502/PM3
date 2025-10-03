@@ -1,0 +1,7 @@
+Design rules tested with online tool at Eurocircuits?
+Power and signals routed to the correct pins of the expansion header?
+Testpoints accessible for testing when connected to discovery board?
+Possibility to connect GND of signalgenerator and oscilloscope?
+Groundplanes present?
+EMC and ESD measures ok?
+Width of supply lines ok? 

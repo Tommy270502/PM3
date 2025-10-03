@@ -1,0 +1,8 @@
+https://en.wikipedia.org/wiki/DMX512#Connectors
+
+The original DMX512 1990 specified that where connectors are used, the data link shall use five-pin XLR style electrical connectors (XLR-5), with female connectors used on transmitting (OUT) ports and male connectors on receiving ports.
+The use of any other XLR-style connector is prohibited.
+
+The three-pin XLR connector is commonly used for DMX512, on lighting and related control equipment, particularly at the budget/DJ end of the market. However, using three-pin XLR connectors for DMX512 is specifically prohibited by section 7.1.2 of the DMX512 standard.
+
+Comment: But three-pin XLR is still commonly used for DMX!

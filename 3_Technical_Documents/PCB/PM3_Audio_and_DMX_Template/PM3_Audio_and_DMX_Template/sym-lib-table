@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "HW_template")(type "KiCad")(uri "${KIPRJMOD}/HW_template.kicad_sym")(options "")(descr ""))
+  (lib (name "CS4271")(type "KiCad")(uri "/Users/josquinrosset/Downloads/PM3/HW_prototype_2025-07-10/HW_prototype_2025-07-10/HW_prototype_2025-07-08/CS4271.kicad_sym")(options "")(descr ""))
+  (lib (name "OPA322")(type "KiCad")(uri "/Users/josquinrosset/Downloads/PM3/HW_prototype_2025-07-10/HW_prototype_2025-07-10/HW_prototype_2025-07-08/OPA322.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "HW_template")(type "KiCad")(uri "${KIPRJMOD}/PM3_Audio_and_DMX.pretty")(options "")(descr ""))
+)

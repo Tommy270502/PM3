@@ -1,0 +1,12 @@
+https://en.wikipedia.org/wiki/DMX512
+https://learn.sparkfun.com/tutorials/introduction-to-dmx/all
+https://ww1.microchip.com/downloads/en/AppNotes/00001659A.pdf
+https://ww1.microchip.com/downloads/en/AppNotes/01076A.pdf
+In the above AppNote a solution with an additional pin and a resistor for generating the BREAK is suggested.
+However, it is also possible to temporarily reconfigure the TX output as a normal GPIO output and set it to low for 100us and then configure it back to the alternate function as UART-TX.
+MAB (Make After Break) can easily be generated as normal GPIO output set to high or by waiting 12us before transmitting.
+https://de.wikipedia.org/wiki/Universal_Asynchronous_Receiver_Transmitter
+
+
+Renn
+https://tsp.esta.org/tsp/documents/docs/DMX512-A_Guide_(8x10)_ESTA.PDF
