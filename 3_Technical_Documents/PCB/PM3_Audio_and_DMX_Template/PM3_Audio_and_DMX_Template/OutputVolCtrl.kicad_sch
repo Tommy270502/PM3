@@ -552,9 +552,35 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 207.01 104.14)
+		(end 240.03 153.67)
+		(stroke
+			(width 0.508)
+			(type solid)
+			(color 255 0 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid df6bc11a-524a-40d5-84b5-f8e1bf2f3415)
+	)
+	(text "Volume Control"
+		(exclude_from_sim no)
+		(at 222.504 111.506 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "15b3df9d-f2cc-4838-b309-f2163ca70b39")
+	)
 	(wire
 		(pts
-			(xy 148.59 88.9) (xy 158.75 88.9)
+			(xy 201.93 124.46) (xy 212.09 124.46)
 		)
 		(stroke
 			(width 0)
@@ -564,7 +590,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 85.09) (xy 171.45 85.09)
+			(xy 212.09 120.65) (xy 224.79 120.65)
 		)
 		(stroke
 			(width 0)
@@ -574,7 +600,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 101.6) (xy 158.75 97.79)
+			(xy 212.09 137.16) (xy 212.09 133.35)
 		)
 		(stroke
 			(width 0)
@@ -584,7 +610,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 105.41) (xy 171.45 106.68)
+			(xy 224.79 140.97) (xy 224.79 142.24)
 		)
 		(stroke
 			(width 0)
@@ -594,7 +620,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 97.79) (xy 171.45 97.79)
+			(xy 212.09 133.35) (xy 224.79 133.35)
 		)
 		(stroke
 			(width 0)
@@ -604,7 +630,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 88.9) (xy 193.04 88.9)
+			(xy 229.87 124.46) (xy 246.38 124.46)
 		)
 		(stroke
 			(width 0)
@@ -614,7 +640,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 101.6) (xy 158.75 101.6)
+			(xy 201.93 137.16) (xy 212.09 137.16)
 		)
 		(stroke
 			(width 0)
@@ -624,7 +650,7 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 101.6) (xy 193.04 101.6)
+			(xy 229.87 137.16) (xy 246.38 137.16)
 		)
 		(stroke
 			(width 0)
@@ -634,7 +660,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 88.9) (xy 158.75 85.09)
+			(xy 212.09 124.46) (xy 212.09 120.65)
 		)
 		(stroke
 			(width 0)
@@ -644,7 +670,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 92.71) (xy 171.45 93.98)
+			(xy 224.79 128.27) (xy 224.79 129.54)
 		)
 		(stroke
 			(width 0)
@@ -654,7 +680,7 @@
 	)
 	(hierarchical_label "out_r"
 		(shape output)
-		(at 193.04 101.6 0)
+		(at 246.38 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -665,7 +691,7 @@
 	)
 	(hierarchical_label "out_l"
 		(shape output)
-		(at 193.04 88.9 0)
+		(at 246.38 124.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -676,7 +702,7 @@
 	)
 	(hierarchical_label "in_l"
 		(shape input)
-		(at 148.59 88.9 180)
+		(at 201.93 124.46 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -687,7 +713,7 @@
 	)
 	(hierarchical_label "in_r"
 		(shape input)
-		(at 148.59 101.6 180)
+		(at 201.93 137.16 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -698,7 +724,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 106.68 0)
+		(at 224.79 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -706,8 +732,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a01e372-8451-4717-ae3f-6d9b977ab452")
-		(property "Reference" "#PWR030"
-			(at 171.45 113.03 0)
+		(property "Reference" "#PWR038"
+			(at 224.79 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -716,7 +742,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 111.76 0)
+			(at 224.79 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -724,7 +750,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 106.68 0)
+			(at 224.79 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -733,7 +759,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 106.68 0)
+			(at 224.79 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -742,7 +768,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 106.68 0)
+			(at 224.79 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -756,7 +782,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/396386cb-b8e3-448a-9ee1-2966fe4ed21e"
-					(reference "#PWR030")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -764,7 +790,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 93.98 0)
+		(at 224.79 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -772,8 +798,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5318c2f8-8ae1-45fb-96ef-7477940dfdf3")
-		(property "Reference" "#PWR031"
-			(at 171.45 100.33 0)
+		(property "Reference" "#PWR037"
+			(at 224.79 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -782,7 +808,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 99.06 0)
+			(at 224.79 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -790,7 +816,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 93.98 0)
+			(at 224.79 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -799,7 +825,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 93.98 0)
+			(at 224.79 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -808,7 +834,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 93.98 0)
+			(at 224.79 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -822,7 +848,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/396386cb-b8e3-448a-9ee1-2966fe4ed21e"
-					(reference "#PWR031")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -830,7 +856,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_Dual")
-		(at 173.99 95.25 270)
+		(at 227.33 130.81 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -838,8 +864,8 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "68fcde28-f920-4527-ab11-9a5e30357429")
-		(property "Reference" "RV5"
-			(at 172.974 113.284 90)
+		(property "Reference" "RV2"
+			(at 226.314 148.844 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -848,7 +874,7 @@
 			)
 		)
 		(property "Value" "50k stereo"
-			(at 179.832 110.744 90)
+			(at 233.172 146.304 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -857,7 +883,7 @@
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_PTV112-4_Dual_Vertical"
-			(at 172.085 88.9 0)
+			(at 225.425 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -866,7 +892,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 172.085 88.9 0)
+			(at 225.425 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -875,7 +901,7 @@
 			)
 		)
 		(property "Description" "Dual potentiometer,  PTV112-4420A-A503"
-			(at 173.99 95.25 0)
+			(at 227.33 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -884,7 +910,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 173.99 95.25 90)
+			(at 227.33 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -893,7 +919,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 173.99 95.25 90)
+			(at 227.33 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -922,7 +948,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/396386cb-b8e3-448a-9ee1-2966fe4ed21e"
-					(reference "RV5")
+					(reference "RV2")
 					(unit 1)
 				)
 			)

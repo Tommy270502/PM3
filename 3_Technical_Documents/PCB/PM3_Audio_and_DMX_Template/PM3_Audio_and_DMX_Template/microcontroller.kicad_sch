@@ -4112,7 +4112,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4fa9b2e7-31ad-437e-939e-35a6c5d6fc92")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR017"
 			(at 96.52 116.84 0)
 			(effects
 				(font
@@ -4162,7 +4162,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -4177,7 +4177,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "56642566-fe2d-44c8-9e84-777dc78444f2")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR014"
 			(at 69.85 50.8 0)
 			(effects
 				(font
@@ -4227,7 +4227,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -4242,7 +4242,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7a0ee5e9-b8f4-44f2-a583-a1e44d251918")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR09"
 			(at 30.48 116.84 0)
 			(effects
 				(font
@@ -4292,7 +4292,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -4307,7 +4307,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "82493bac-eca5-447f-b934-c50a7c5f3480")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR013"
 			(at 68.58 116.84 0)
 			(effects
 				(font
@@ -4357,7 +4357,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -4372,7 +4372,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "93b89b30-8664-4713-bb08-83079ff2c77f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR011"
 			(at 58.42 116.84 0)
 			(effects
 				(font
@@ -4422,7 +4422,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -4438,7 +4438,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b05d90b3-fe22-4d4d-86dc-581786e6d275")
-		(property "Reference" "P?"
+		(property "Reference" "P1"
 			(at 44.45 31.75 0)
 			(effects
 				(font
@@ -4694,7 +4694,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "P?")
+					(reference "P1")
 					(unit 1)
 				)
 			)
@@ -4710,7 +4710,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0462a6c-0724-4e28-ad3a-8e13a5783a0c")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR010"
 			(at 48.26 38.1 0)
 			(effects
 				(font
@@ -4760,7 +4760,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -4775,7 +4775,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ca0b4a0d-916f-4e09-ab6b-b86dadc58c67")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR016"
 			(at 86.36 38.1 0)
 			(effects
 				(font
@@ -4825,7 +4825,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4840,7 +4840,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ce66c06e-c220-4948-a598-6468e5189fd7")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR015"
 			(at 69.85 73.66 0)
 			(effects
 				(font
@@ -4890,7 +4890,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -4905,7 +4905,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e823c5f1-4f17-499f-a837-22f7d6f327e4")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR012"
 			(at 78.74 38.1 0)
 			(effects
 				(font
@@ -4955,7 +4955,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4971,7 +4971,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f00f183a-c788-4952-9c80-dc59de5ac0d6")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR08"
 			(at 40.64 38.1 0)
 			(effects
 				(font
@@ -5021,7 +5021,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "#PWR?")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -5037,7 +5037,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fde5e46b-03ab-4ec9-9725-3a04e4ff82f9")
-		(property "Reference" "P?"
+		(property "Reference" "P2"
 			(at 82.55 31.75 0)
 			(effects
 				(font
@@ -5293,7 +5293,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/8b662c4d-5749-4ac0-af71-1d98908dcf56"
-					(reference "P?")
+					(reference "P2")
 					(unit 1)
 				)
 			)
