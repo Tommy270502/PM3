@@ -553,8 +553,8 @@
 		)
 	)
 	(rectangle
-		(start 207.01 104.14)
-		(end 240.03 153.67)
+		(start 130.81 71.12)
+		(end 163.83 120.65)
 		(stroke
 			(width 0.508)
 			(type solid)
@@ -567,7 +567,7 @@
 	)
 	(text "Volume Control"
 		(exclude_from_sim no)
-		(at 222.504 111.506 0)
+		(at 146.304 78.486 0)
 		(effects
 			(font
 				(size 1.905 1.905)
@@ -580,7 +580,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 124.46) (xy 212.09 124.46)
+			(xy 125.73 91.44) (xy 135.89 91.44)
 		)
 		(stroke
 			(width 0)
@@ -590,7 +590,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 120.65) (xy 224.79 120.65)
+			(xy 135.89 87.63) (xy 148.59 87.63)
 		)
 		(stroke
 			(width 0)
@@ -600,7 +600,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 137.16) (xy 212.09 133.35)
+			(xy 135.89 104.14) (xy 135.89 100.33)
 		)
 		(stroke
 			(width 0)
@@ -610,7 +610,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 140.97) (xy 224.79 142.24)
+			(xy 148.59 107.95) (xy 148.59 109.22)
 		)
 		(stroke
 			(width 0)
@@ -620,7 +620,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 133.35) (xy 224.79 133.35)
+			(xy 135.89 100.33) (xy 148.59 100.33)
 		)
 		(stroke
 			(width 0)
@@ -630,7 +630,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 124.46) (xy 246.38 124.46)
+			(xy 153.67 91.44) (xy 170.18 91.44)
 		)
 		(stroke
 			(width 0)
@@ -640,7 +640,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 137.16) (xy 212.09 137.16)
+			(xy 125.73 104.14) (xy 135.89 104.14)
 		)
 		(stroke
 			(width 0)
@@ -650,7 +650,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 137.16) (xy 246.38 137.16)
+			(xy 153.67 104.14) (xy 170.18 104.14)
 		)
 		(stroke
 			(width 0)
@@ -660,7 +660,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 124.46) (xy 212.09 120.65)
+			(xy 135.89 91.44) (xy 135.89 87.63)
 		)
 		(stroke
 			(width 0)
@@ -670,7 +670,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 128.27) (xy 224.79 129.54)
+			(xy 148.59 95.25) (xy 148.59 96.52)
 		)
 		(stroke
 			(width 0)
@@ -680,7 +680,7 @@
 	)
 	(hierarchical_label "out_r"
 		(shape output)
-		(at 246.38 137.16 0)
+		(at 170.18 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -691,7 +691,7 @@
 	)
 	(hierarchical_label "out_l"
 		(shape output)
-		(at 246.38 124.46 0)
+		(at 170.18 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -702,7 +702,7 @@
 	)
 	(hierarchical_label "in_l"
 		(shape input)
-		(at 201.93 124.46 180)
+		(at 125.73 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -713,7 +713,7 @@
 	)
 	(hierarchical_label "in_r"
 		(shape input)
-		(at 201.93 137.16 180)
+		(at 125.73 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -724,7 +724,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 224.79 142.24 0)
+		(at 148.59 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -733,7 +733,7 @@
 		(fields_autoplaced yes)
 		(uuid "2a01e372-8451-4717-ae3f-6d9b977ab452")
 		(property "Reference" "#PWR038"
-			(at 224.79 148.59 0)
+			(at 148.59 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -742,7 +742,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 224.79 147.32 0)
+			(at 148.59 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -750,7 +750,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 142.24 0)
+			(at 148.59 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -759,7 +759,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 142.24 0)
+			(at 148.59 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -768,7 +768,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 142.24 0)
+			(at 148.59 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -790,7 +790,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 224.79 129.54 0)
+		(at 148.59 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -799,7 +799,7 @@
 		(fields_autoplaced yes)
 		(uuid "5318c2f8-8ae1-45fb-96ef-7477940dfdf3")
 		(property "Reference" "#PWR037"
-			(at 224.79 135.89 0)
+			(at 148.59 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -808,7 +808,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 224.79 134.62 0)
+			(at 148.59 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -816,7 +816,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 129.54 0)
+			(at 148.59 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -825,7 +825,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 224.79 129.54 0)
+			(at 148.59 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -834,7 +834,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 129.54 0)
+			(at 148.59 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -856,7 +856,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer_Dual")
-		(at 227.33 130.81 270)
+		(at 151.13 97.79 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -865,7 +865,7 @@
 		(dnp no)
 		(uuid "68fcde28-f920-4527-ab11-9a5e30357429")
 		(property "Reference" "RV2"
-			(at 226.314 148.844 90)
+			(at 150.114 115.824 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -874,7 +874,7 @@
 			)
 		)
 		(property "Value" "50k stereo"
-			(at 233.172 146.304 90)
+			(at 156.972 113.284 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -883,7 +883,7 @@
 			)
 		)
 		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_PTV112-4_Dual_Vertical"
-			(at 225.425 124.46 0)
+			(at 149.225 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -892,7 +892,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 225.425 124.46 0)
+			(at 149.225 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -901,7 +901,7 @@
 			)
 		)
 		(property "Description" "Dual potentiometer,  PTV112-4420A-A503"
-			(at 227.33 130.81 0)
+			(at 151.13 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -910,7 +910,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 227.33 130.81 90)
+			(at 151.13 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -919,7 +919,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 227.33 130.81 90)
+			(at 151.13 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
