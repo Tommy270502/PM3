@@ -1,0 +1,13 @@
+../Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm4.h:1777:22:__NVIC_ClearPendingIRQ	2
+../Core/Src/audio_codec.c:115:6:codec_reset	1
+../Core/Src/audio_codec.c:121:19:codec_init	2
+../Core/Src/audio_codec.c:187:6:codec_start	1
+../Core/Src/audio_codec.c:272:9:codec_data_ready	1
+../Core/Src/audio_codec.c:276:6:codec_clear_data_ready	1
+../Core/Src/audio_codec.c:280:6:codec_mirror_left_channel	1
+../Core/Src/audio_codec.c:284:13:sai_dma_init	3
+../Core/Src/audio_codec.c:397:13:split_and_cast_i2s_buffer	1
+../Core/Src/audio_codec.c:402:6:codec_update_output_buffer	1
+../Core/Src/audio_codec.c:406:6:DMA2_Stream1_IRQHandler	3
+../Core/Src/audio_codec.c:436:6:DMA2_Stream5_IRQHandler	2
