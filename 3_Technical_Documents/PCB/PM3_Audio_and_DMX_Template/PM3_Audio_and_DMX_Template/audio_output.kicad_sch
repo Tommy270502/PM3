@@ -1609,16 +1609,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 189.23) (xy 163.83 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f66a452-1f5a-4bad-84c4-7c7a7f19853d")
-	)
-	(wire
-		(pts
 			(xy 109.22 55.88) (xy 116.84 55.88)
 		)
 		(stroke
@@ -1679,16 +1669,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 176.53) (xy 163.83 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d504e6b-a9b2-4dfb-8bac-47a086819589")
-	)
-	(wire
-		(pts
 			(xy 127 187.96) (xy 127 189.23)
 		)
 		(stroke
@@ -1706,16 +1686,6 @@
 			(type default)
 		)
 		(uuid "a148eff3-b37d-423e-bd67-b78f38058e0f")
-	)
-	(wire
-		(pts
-			(xy 163.83 189.23) (xy 163.83 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a40c149b-468d-4734-b514-52b2bfcb51bb")
 	)
 	(wire
 		(pts
@@ -1866,16 +1836,6 @@
 			(type default)
 		)
 		(uuid "d5570c24-52cd-4d71-bf23-608e1f13bb03")
-	)
-	(wire
-		(pts
-			(xy 143.51 171.45) (xy 163.83 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7425423-4dc7-4ba5-bbe2-f67762c55f2b")
 	)
 	(wire
 		(pts
@@ -3546,94 +3506,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 163.83 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "64c277c2-fe03-4ef4-9a07-c510cde1ac31")
-		(property "Reference" "C63"
-			(at 167.64 178.1809 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1u ELEC"
-			(at 167.64 180.7209 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_4x5.8"
-			(at 164.7952 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 163.83 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 163.83 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "EEE1HA010SR"
-			(at 163.83 180.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Panasonic"
-			(at 163.83 180.34 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7f01ee35-08ec-4a0b-af77-b0b2641bed6e")
-		)
-		(pin "2"
-			(uuid "17c964a7-e7c9-40dc-abdd-073731dadb7a")
-		)
-		(instances
-			(project "PM3_Audio_and_DMX"
-				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/0d1d0148-6c34-461b-860b-63716d190b68"
-					(reference "C63")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 96.52 48.26 90)
 		(mirror x)
@@ -4543,94 +4415,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 143.51 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a2536204-679c-40b5-abd1-c764768887b0")
-		(property "Reference" "C60"
-			(at 147.32 179.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n COG/X7R"
-			(at 147.32 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 144.4752 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 143.51 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 143.51 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "GPC0603103"
-			(at 143.51 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 143.51 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "94e93b3b-b8cb-4ff8-b6b0-3bda9bb1927e")
-		)
-		(pin "2"
-			(uuid "c802e944-664e-4490-9932-6f3dba55edc2")
-		)
-		(instances
-			(project "PM3_Audio_and_DMX"
-				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/0d1d0148-6c34-461b-860b-63716d190b68"
-					(reference "C60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
 		(at 132.08 152.4 0)
@@ -5339,6 +5123,94 @@
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/0d1d0148-6c34-461b-860b-63716d190b68"
 					(reference "#PWR088")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 143.51 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d69ebcfc-835a-46f2-b90d-e4d141b41228")
+		(property "Reference" "C50"
+			(at 147.32 179.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 147.32 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 144.4752 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 143.51 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 143.51 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GPC0603104-X7R"
+			(at 143.51 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 143.51 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e2c126ab-9683-4e72-9b53-9ef9675fc98c")
+		)
+		(pin "2"
+			(uuid "dcc8c103-52f5-4ee4-8be7-b4301085676e")
+		)
+		(instances
+			(project "PM3_Audio_and_DMX"
+				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/0d1d0148-6c34-461b-860b-63716d190b68"
+					(reference "C50")
 					(unit 1)
 				)
 			)
