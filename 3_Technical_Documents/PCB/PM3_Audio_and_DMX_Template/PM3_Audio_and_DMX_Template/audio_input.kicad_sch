@@ -2264,7 +2264,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 269.24 139.7 0)
 			(effects
 				(font
@@ -2320,94 +2320,6 @@
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
 					(reference "U12")
 					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 246.38 115.57 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2373be32-25c7-47af-a693-a7855cfd780e")
-		(property "Reference" "C49"
-			(at 250.19 114.2999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 250.19 116.8399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 247.3452 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 246.38 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 246.38 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "GPC0603104-X7R"
-			(at 246.38 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 246.38 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a9c7b2bd-e5a2-4330-847a-b1dc59c51077")
-		)
-		(pin "2"
-			(uuid "d917006c-01bd-4190-9f54-d93135555dc2")
-		)
-		(instances
-			(project "PM3_Audio_and_DMX"
-				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
-					(reference "C49")
-					(unit 1)
 				)
 			)
 		)
@@ -2737,6 +2649,182 @@
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
 					(reference "#PWR087")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 247.65 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6dda9a28-cb9e-413a-af9b-5f0e34ddfc91")
+		(property "Reference" "C49"
+			(at 251.46 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 251.46 81.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 248.6152 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 247.65 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 247.65 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GPC0603104-X7R"
+			(at 247.65 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 247.65 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c0409c30-31b8-4fe6-ad9f-4ff4f4f34f89")
+		)
+		(pin "1"
+			(uuid "0ca6bd95-a28c-4ec7-9276-0ac80d8b97be")
+		)
+		(instances
+			(project "PM3_Audio_and_DMX"
+				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
+					(reference "C49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 246.38 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71ce945f-85ed-4d1a-92fa-5e9a8f40feb0")
+		(property "Reference" "C48"
+			(at 250.19 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 250.19 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 247.3452 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 246.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 246.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GPC0603104-X7R"
+			(at 246.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 246.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4fd05b7d-17f0-43d6-ab19-d2f8fcd2100b")
+		)
+		(pin "1"
+			(uuid "b1c53341-d8c6-4e78-bac7-3e149472ea04")
+		)
+		(instances
+			(project "PM3_Audio_and_DMX"
+				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -3182,7 +3270,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 134.62 121.92 0)
 			(effects
 				(font
@@ -3574,7 +3662,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 232.41 115.57 0)
 			(effects
 				(font
@@ -3802,94 +3890,6 @@
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
 					(reference "R41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 247.65 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c1edbe23-3adc-4e36-a4d2-c863cdb66256")
-		(property "Reference" "C48"
-			(at 251.46 78.7399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 251.46 81.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 248.6152 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "GPC0603104-X7R"
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "129bb5b2-0bbe-40b0-86b2-ab014f324160")
-		)
-		(pin "2"
-			(uuid "d0e42760-be19-47b6-b822-8bd3a784b69a")
-		)
-		(instances
-			(project "PM3_Audio_and_DMX"
-				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c/8717c379-1954-44ba-9e1e-6e736552020c"
-					(reference "C48")
 					(unit 1)
 				)
 			)
