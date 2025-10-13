@@ -6949,7 +6949,7 @@
 			(uuid "cd19e4b7-5d27-468b-892f-58a5aec03580")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_DPDT_CK_JS202011JCQN.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/switch/JS202011JCQN--3DModel-STEP-1.STEP"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6957,7 +6957,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -7865,15 +7865,15 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_PTV112-4_Dual_Vertical.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/Potentiometer/PTV112-4420A-B503--3DModel-STEP-269445.STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11 -3 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 90)
 			)
 		)
 	)
@@ -10204,15 +10204,15 @@
 			(uuid "870f1409-c862-4c98-84ea-9c2c79a3a2cc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Audio.3dshapes/Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/3m5 jack/SJ-3523-SMT-TR--3DModel-STEP-1.STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 6 3)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -180)
 			)
 		)
 	)
@@ -17031,15 +17031,15 @@
 			(uuid "77774341-6093-43db-ab66-5096fecaf0d6")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Audio.3dshapes/Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/3m5 jack/SJ-3523-SMT-TR--3DModel-STEP-1.STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 6 3)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -180)
 			)
 		)
 	)
@@ -31625,15 +31625,15 @@
 			(uuid "096cf24d-be6c-43fc-b8fc-944e7390ec78")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Audio.3dshapes/Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/3m5 jack/SJ-3523-SMT-TR--3DModel-STEP-1.STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 0 6 3)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -180)
 			)
 		)
 	)
@@ -34875,15 +34875,15 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Potentiometer_THT.3dshapes/Potentiometer_Bourns_PTV112-4_Dual_Vertical.step"
+		(model "C:/Users/Thomas/Documents/git/PM3/3_Technical_Documents/PCB/libraries/Potentiometer/PTV112-4420A-B503--3DModel-STEP-269445.STEP"
 			(offset
-				(xyz 0 0 0)
+				(xyz 11 -3 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 90)
 			)
 		)
 	)
@@ -56700,7 +56700,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "PM3-Audio & DMX Template\n(c) rost@zhaw.ch 09\n/2025"
+	(gr_text "PM3-Audio / 2025\ngrebnbog & perritho\n"
 		(at 92.81 68.95 0)
 		(layer "F.SilkS")
 		(uuid "3b890164-1c9d-4c59-afd6-5c6f79bd664f")
