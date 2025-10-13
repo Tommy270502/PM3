@@ -2291,6 +2291,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 259.08 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "G"
 			(uuid "4cccb7ec-6ae6-44c6-a5d0-505a9fd4d258")
 		)
@@ -2357,6 +2366,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 85.09 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 85.09 63.5 0)
 			(effects
 				(font
@@ -2511,6 +2529,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 52.07 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 52.07 142.24 0)
 			(effects
 				(font
@@ -2739,6 +2766,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 101.6 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "HW_template"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b"
@@ -2858,6 +2894,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 85.09 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 85.09 58.42 0)
 			(effects
 				(font
@@ -3012,6 +3057,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 31.75 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 31.75 142.24 0)
 			(effects
 				(font
@@ -3201,6 +3255,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 82.55 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7fa85e7a-dcce-45d7-9d2e-623c3eea9054")
 		)
@@ -3279,6 +3342,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 101.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 101.6 144.78 0)
 			(effects
 				(font
@@ -3388,6 +3460,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 74.93 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 74.93 143.51 0)
 			(effects
 				(font
@@ -3612,6 +3693,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 101.6 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "HW_template"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b"
@@ -3687,6 +3777,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 101.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 101.6 134.62 0)
 			(effects
 				(font

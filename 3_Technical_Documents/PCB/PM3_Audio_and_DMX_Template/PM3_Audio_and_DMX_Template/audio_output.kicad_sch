@@ -2199,6 +2199,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 96.52 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d06f58f5-2ae8-4c81-8676-5f4816fbde6a")
 		)
@@ -2276,6 +2285,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 96.52 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 96.52 43.18 90)
 			(effects
 				(font
@@ -2369,6 +2387,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 116.84 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "51d19c29-52d7-4935-b4b4-3ebdb3f048e3")
 		)
@@ -2454,6 +2481,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 101.6 140.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "445153fe-9007-410c-ae36-7d42c6ee7e42")
 		)
@@ -2531,6 +2567,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 96.52 115.57 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 96.52 115.57 90)
 			(effects
 				(font
@@ -2691,6 +2736,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 101.6 68.58 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b323ce9-01b0-4800-959a-a6b888098cd4")
 		)
@@ -2768,6 +2822,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 180.34 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 180.34 45.72 90)
 			(effects
 				(font
@@ -2861,6 +2924,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 96.52 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e06a8905-3197-4ca3-809f-59c86cc55dce")
 		)
@@ -2939,6 +3011,15 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik "
+			(at 168.91 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 168.91 45.72 90)
 			(effects
 				(font
@@ -3166,6 +3247,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 132.08 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f3d160b5-9caf-42b2-ac5d-f9fb3779081b")
 		)
@@ -3243,6 +3333,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 146.05 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 146.05 109.22 90)
 			(effects
 				(font
@@ -3337,6 +3436,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 116.84 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "224c7ad4-1eb2-4a44-b9a6-0326879ef271")
 		)
@@ -3415,6 +3523,15 @@
 			)
 		)
 		(property "Manufacturer" "Wurth Elektronik "
+			(at 168.91 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 168.91 118.11 90)
 			(effects
 				(font
@@ -3578,6 +3695,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 143.51 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "54d2912b-29aa-4a26-ba50-6fc59eb0b1c5")
 		)
@@ -3655,6 +3781,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 96.52 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 96.52 48.26 90)
 			(effects
 				(font
@@ -3748,6 +3883,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 121.92 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a545e68b-c994-423e-a559-fb6187d11119")
 		)
@@ -3825,6 +3969,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 121.92 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 121.92 43.18 90)
 			(effects
 				(font
@@ -3986,6 +4139,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 116.84 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "33902f73-9d42-410f-b0ee-6a1464186075")
 		)
@@ -4063,6 +4225,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 116.84 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 116.84 137.16 90)
 			(effects
 				(font
@@ -4223,6 +4394,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 180.34 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d148c59b-260f-40d3-96ef-abc23a82540c")
 		)
@@ -4375,6 +4555,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 121.92 120.65 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7dba6198-b916-4e9c-b8c8-f5df71850163")
 		)
@@ -4455,6 +4644,15 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 129.54 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 129.54 180.34 0)
 			(effects
 				(font
@@ -4641,6 +4839,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 187.96 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "99cfaa0e-89d5-45cd-93a8-6f55273e0816")
 		)
@@ -4718,6 +4925,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 132.08 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 132.08 63.5 90)
 			(effects
 				(font
@@ -4811,6 +5027,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 146.05 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a20cc007-576e-4116-9067-ddcd448a3947")
 		)
@@ -4896,6 +5121,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 96.52 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d45f2202-d41c-495c-830c-d7535bfaa2b2")
 		)
@@ -4973,6 +5207,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 121.92 115.57 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 121.92 115.57 90)
 			(effects
 				(font
@@ -5134,6 +5377,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 187.96 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7b5a1f85-d12b-4ee7-949e-436e51e24a6f")
 		)
@@ -5278,6 +5530,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 146.05 36.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 146.05 36.83 90)
 			(effects
 				(font
@@ -5439,6 +5700,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 146.05 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "f106bdb3-716f-4992-b220-72b7bfd8cdfc")
 		)
@@ -5549,6 +5819,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 146.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "3ebe6c06-e1e0-49ad-b370-da982695edcd")
 		)
@@ -5650,6 +5929,15 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity"
+			(at 146.05 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 146.05 97.79 90)
 			(effects
 				(font

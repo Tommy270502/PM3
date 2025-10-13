@@ -1869,6 +1869,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 58.42 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e42995ef-475a-4f63-9db0-4497a50885e2")
 		)
@@ -1976,6 +1985,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 133.35 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 133.35 46.99 0)
 			(effects
 				(font
@@ -2096,6 +2114,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 46.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cbe4e5ee-39be-4c8e-b0dd-7491b2bd0c01")
 		)
@@ -2200,6 +2227,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 133.35 63.5 0)
 			(effects
 				(font
@@ -2490,6 +2526,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 266.7 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "S"
 			(uuid "dc0189aa-83a1-4ad4-8614-ded7f8777b76")
 		)
@@ -2680,6 +2725,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 34.29 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3324bdf1-3c81-4e69-a632-27a402b3eb0b")
 		)
@@ -2756,6 +2810,15 @@
 			)
 		)
 		(property "Manufacturer" "CUI"
+			(at 266.7 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 266.7 106.68 0)
 			(effects
 				(font
@@ -3055,6 +3118,15 @@
 			)
 		)
 		(property "Manufacturer" "CUI"
+			(at 26.67 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 26.67 95.25 0)
 			(effects
 				(font

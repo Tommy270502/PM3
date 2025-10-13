@@ -2187,6 +2187,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 92.71 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d61fceb0-dc9f-4658-96f8-4d25ae42fe80")
 		)
@@ -2273,6 +2282,15 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 74.93 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 74.93 78.74 0)
 			(effects
 				(font
@@ -2379,6 +2397,15 @@
 			)
 		)
 		(property "Manufacturer" "Panasonic"
+			(at 36.83 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 36.83 80.01 0)
 			(effects
 				(font
@@ -2622,6 +2649,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 162.56 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "008db446-8234-4b07-a95f-cb6098b750b7")
 		)
@@ -2702,6 +2738,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 198.12 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 198.12 59.69 0)
 			(effects
 				(font
@@ -2862,6 +2907,15 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
+			(at 203.2 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 203.2 88.9 0)
 			(effects
 				(font
@@ -3106,6 +3160,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 76.2 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bb2ce99c-b275-40e9-a2a3-c6562837a10b")
 		)
@@ -3265,6 +3328,15 @@
 			)
 		)
 		(property "Manufacturer" "Kamaya"
+			(at 203.2 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 203.2 78.74 0)
 			(effects
 				(font
@@ -3511,6 +3583,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 149.86 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8732d879-9fd7-42ea-b6f0-9255681417a0")
 		)
@@ -3597,6 +3678,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 52.07 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 52.07 80.01 0)
 			(effects
 				(font
@@ -3771,6 +3861,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 92.71 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0434f3ee-c8e4-4757-b5a2-fc19072a021a")
 		)
@@ -3857,6 +3956,15 @@
 			)
 		)
 		(property "Manufacturer" "Murata"
+			(at 212.09 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 212.09 74.93 0)
 			(effects
 				(font
@@ -4023,6 +4131,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 185.42 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "6"
 			(uuid "f217b0cb-d8f0-4f81-a257-93b7cdecd46d")
 		)
@@ -4150,6 +4267,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 104.14 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9bcc17ac-ee5e-4db4-90f2-bd33cca6c0e4")
 		)
@@ -4244,6 +4370,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "60565698-acf0-46a1-be17-695d1e862de3")
 		)
@@ -4330,6 +4465,15 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
+			(at 165.1 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 165.1 82.55 0)
 			(effects
 				(font

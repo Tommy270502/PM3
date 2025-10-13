@@ -2050,6 +2050,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 80.01 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ee9d34aa-bcb5-405a-8f7f-03a76544ff34")
 		)
@@ -2130,6 +2139,15 @@
 		)
 		(property "Manufacturer" ""
 			(at 134.62 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 134.62 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2223,6 +2241,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 154.94 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1ab0dacd-0255-4113-9972-ee952d8804cd")
 		)
@@ -2283,6 +2310,15 @@
 			)
 		)
 		(property "Description" "Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"
+			(at 269.24 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 269.24 139.7 0)
 			(effects
 				(font
@@ -2389,6 +2425,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 173.99 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 173.99 72.39 0)
 			(effects
 				(font
@@ -2541,6 +2586,15 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 60.96 0)
 			(effects
 				(font
@@ -2727,6 +2781,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 247.65 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c0409c30-31b8-4fe6-ad9f-4ff4f4f34f89")
 		)
@@ -2815,6 +2878,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 246.38 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4fd05b7d-17f0-43d6-ab19-d2f8fcd2100b")
 		)
@@ -2895,6 +2967,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 88.9 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 88.9 71.12 0)
 			(effects
 				(font
@@ -3055,6 +3136,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 80.01 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7322a2e9-c3e0-4089-b8bc-be975d2d143a")
 		)
@@ -3135,6 +3225,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 173.99 88.9 0)
 			(effects
 				(font
@@ -3229,6 +3328,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 146.05 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "219026f4-cb40-408f-9e10-a5d21ff1f608")
 		)
@@ -3289,6 +3397,15 @@
 			)
 		)
 		(property "Description" "Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"
+			(at 134.62 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 121.92 0)
 			(effects
 				(font
@@ -3403,6 +3520,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 233.68 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "f6d18dfd-6d5b-4889-84bc-a40a1e9be8f4")
 		)
@@ -3509,6 +3635,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 88.9 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "af9cfa3f-abe0-4471-ab96-eceec0354cc0")
 		)
@@ -3587,6 +3722,15 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 134.62 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 134.62 97.79 0)
 			(effects
 				(font
@@ -3681,6 +3825,15 @@
 			)
 		)
 		(property "Description" "Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"
+			(at 232.41 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 232.41 115.57 0)
 			(effects
 				(font
@@ -3794,6 +3947,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 134.62 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b0c8e5ff-4d67-4e64-b669-731c68a09055")
 		)
@@ -3880,6 +4042,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 154.94 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7bfc5cb6-7141-4b20-999d-80e7f9cdd562")
 		)
@@ -3959,6 +4130,15 @@
 		)
 		(property "Manufacturer" ""
 			(at 146.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 146.05 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)

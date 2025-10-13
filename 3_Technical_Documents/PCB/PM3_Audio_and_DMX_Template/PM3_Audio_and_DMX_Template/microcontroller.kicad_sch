@@ -4611,6 +4611,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 43.18 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "13"
 			(uuid "f18c6332-43d7-4082-871e-1f86569b04df")
 		)
@@ -5202,6 +5211,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 81.28 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 81.28 76.2 0)
 			(effects
 				(font

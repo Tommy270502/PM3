@@ -927,6 +927,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 151.13 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cd58f403-2412-40f1-bd71-77c9e153b61c")
 		)

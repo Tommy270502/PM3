@@ -2561,6 +2561,28 @@
 			)
 		)
 	)
+	(global_label "DIN_1"
+		(shape input)
+		(at 68.58 105.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "75211107-aa1c-4812-b87e-5fe55463c073")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 75.1684 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BCLK_1"
 		(shape input)
 		(at 148.59 99.06 180)
@@ -2579,6 +2601,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "DOUT_1"
+		(shape input)
+		(at 68.58 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left)
+		)
+		(uuid "8324a682-136e-4b20-a772-34ff30b67264")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 76.5017 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2715,28 +2759,6 @@
 			)
 		)
 	)
-	(global_label "DIN_1"
-		(shape input)
-		(at 68.58 107.95 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left)
-		)
-		(uuid "9be91601-2aa9-4201-a54a-009b98ad24ea")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 75.1684 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Rx"
 		(shape input)
 		(at 69.85 74.93 0)
@@ -2860,28 +2882,6 @@
 		(uuid "d29bed43-00f1-4403-9c15-52b7840bdd86")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 75.1684 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "DOUT_1"
-		(shape input)
-		(at 68.58 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1 1)
-			)
-			(justify left)
-		)
-		(uuid "d305ebcb-08e8-4ce8-91be-2138a6d06f5d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.5017 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3198,6 +3198,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 228.6 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b79745f0-d899-4ab8-86c4-4addcc7806a7")
 		)
@@ -3417,6 +3426,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 219.71 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d21ea6f4-f782-42db-a648-766ec22a7394")
 		)
@@ -3552,6 +3570,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 266.7 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4e41d612-cb02-4e1d-94c4-6d13111c4726")
 		)
@@ -3612,6 +3639,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 105.41 0)
 			(effects
 				(font
@@ -3773,6 +3809,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 81.28 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "df29b451-905b-4260-876a-4485a7fea67e")
 		)
@@ -3907,6 +3952,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 156.21 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3c210e92-b31c-47e1-aae6-d056b7270b1b")
 		)
@@ -3967,6 +4021,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 99.06 0)
 			(effects
 				(font
@@ -4063,6 +4126,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 91.44 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "50903eb6-7b75-40b2-94af-17ff6ca69cdf")
 		)
@@ -4142,6 +4214,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 219.71 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 219.71 54.61 0)
 			(effects
 				(font
@@ -4237,6 +4318,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 257.81 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cfff4e9d-2dd8-4228-8642-222282059c11")
 		)
@@ -4317,6 +4407,15 @@
 			)
 		)
 		(property "Manufacturer" "Murata"
+			(at 80.01 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 80.01 43.18 0)
 			(effects
 				(font
@@ -4478,6 +4577,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 257.81 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b7f32fea-98d9-4106-a140-b09224a2eca6")
 		)
@@ -4611,6 +4719,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 156.21 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "64c7d6e7-e9e9-4400-926d-7f948d785fe0")
 		)
@@ -4671,6 +4788,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 93.98 0)
 			(effects
 				(font
@@ -4832,6 +4958,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 105.41 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7474bb91-b9ed-494d-b235-5291678bb17e")
 		)
@@ -4892,6 +5027,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 110.49 0)
 			(effects
 				(font
@@ -4968,6 +5112,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 30.48 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "855cd494-2670-4ad9-b79d-1f94d93057b3")
 		)
@@ -5028,6 +5181,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 113.03 0)
 			(effects
 				(font
@@ -5170,6 +5332,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 156.21 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aa7e42a1-1e5a-47f3-bc12-96ef7520a621")
 		)
@@ -5232,6 +5403,15 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-D0WD-V3 SoC, without PSRAM, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"
+			(at 53.34 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 53.34 97.79 0)
 			(effects
 				(font
@@ -5411,6 +5591,15 @@
 			)
 		)
 		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 156.21 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 96.52 0)
 			(effects
 				(font

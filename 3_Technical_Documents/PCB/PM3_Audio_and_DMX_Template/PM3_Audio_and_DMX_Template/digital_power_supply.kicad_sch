@@ -1351,6 +1351,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 115.57 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "26678dc0-83fc-4f00-a340-d7abc4e6dddc")
 		)
@@ -1503,6 +1512,15 @@
 			)
 		)
 		(property "Manufacturer" "Linear Technology"
+			(at 143.51 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 143.51 83.82 0)
 			(effects
 				(font
@@ -1706,6 +1724,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 130.81 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b5ef8cda-dbf9-47ba-aa40-d5e04525ea7a")
 		)
@@ -1790,6 +1817,15 @@
 			)
 		)
 		(property "Manufacturer" "Murata"
+			(at 170.18 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 170.18 88.9 0)
 			(effects
 				(font
@@ -1951,6 +1987,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 156.21 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 156.21 72.39 0)
 			(effects
 				(font
@@ -2189,6 +2234,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 101.6 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bae0900b-c0f9-4489-aca1-7d2055b44a63")
 		)
@@ -2343,6 +2397,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 114.3 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 114.3 73.66 0)
 			(effects
 				(font

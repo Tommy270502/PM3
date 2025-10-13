@@ -1645,6 +1645,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 99.06 46.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f45eb471-b641-4a67-8ade-d1231c944528")
 		)
@@ -1881,6 +1890,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 77.47 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "645a19b5-d510-4917-afa0-6b2fc32b54e0")
 		)
@@ -1975,6 +1993,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 83.82 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "108a835e-7cec-4453-aa55-1290007f8e76")
 		)
@@ -2061,6 +2088,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 83.82 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 83.82 101.6 0)
 			(effects
 				(font
@@ -2229,6 +2265,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 99.06 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a248d18e-8ad4-43be-badf-848f55f095ab")
 		)
@@ -2309,6 +2354,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 53.34 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 53.34 97.79 0)
 			(effects
 				(font
@@ -2401,6 +2455,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 99.06 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 99.06 62.23 90)
 			(effects
 				(font
@@ -2503,6 +2566,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 153.67 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6f4828c-562e-4e85-823e-962afc14b342")
 		)
@@ -2589,6 +2661,15 @@
 			)
 		)
 		(property "Manufacturer" ""
+			(at 72.39 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 72.39 114.3 0)
 			(effects
 				(font
@@ -2763,6 +2844,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "da47337e-dac1-4500-8c19-f7156e3a7a42")
 		)
@@ -2847,6 +2937,15 @@
 			)
 		)
 		(property "Manufacturer" "Xicon"
+			(at 128.27 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 128.27 87.63 90)
 			(effects
 				(font
@@ -2941,6 +3040,15 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
+			(at 106.68 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 106.68 80.01 0)
 			(effects
 				(font
@@ -3295,6 +3403,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Type" ""
+			(at 39.37 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ef82adce-28c3-4c0d-8d35-7e8ad5c456ae")
 		)
@@ -3370,6 +3487,15 @@
 			)
 		)
 		(property "Manufacturer" "Kemet"
+			(at 142.24 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
 			(at 142.24 87.63 90)
 			(effects
 				(font
