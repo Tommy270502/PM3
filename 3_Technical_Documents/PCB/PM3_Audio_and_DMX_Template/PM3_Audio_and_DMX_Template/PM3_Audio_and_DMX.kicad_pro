@@ -59,7 +59,24 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|74185000|95100000|8b56a823-48f8-4424-92db-954eccff7150|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_edge_clearance|196930000|101967975|749e8519-24eb-4b49-8c6b-a0e2338a4d7e|9b93db29-5a71-4ce9-9661-7a4a21c52739",
+          ""
+        ],
+        [
+          "silk_edge_clearance|74985000|104220000|749e8519-24eb-4b49-8c6b-a0e2338a4d7e|7c00d474-bbcb-4aed-a8a7-b67ada8eb8a8",
+          ""
+        ],
+        [
+          "silk_edge_clearance|75010000|85920000|749e8519-24eb-4b49-8c6b-a0e2338a4d7e|f0e1d39d-dd56-4312-a012-b782a9f0911d",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -162,8 +179,8 @@
         {
           "td_allow_use_two_tracks": true,
           "td_curve_segcount": 0,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_height_ratio": 0.8,
+          "td_length_ratio": 0.3,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
           "td_on_pad_in_zone": false,
@@ -590,7 +607,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "PM3_Audio_and_DMX.step",

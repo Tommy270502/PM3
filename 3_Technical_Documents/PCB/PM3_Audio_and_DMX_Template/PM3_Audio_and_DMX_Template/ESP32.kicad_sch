@@ -3155,7 +3155,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f95ff8e-46d7-4b11-a349-9d5de3baa0c8")
-		(property "Reference" "SW1"
+		(property "Reference" "EN1"
 			(at 228.6 41.91 0)
 			(effects
 				(font
@@ -3216,7 +3216,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/0cd82055-ce21-4aed-acf2-771a9b05e7c5"
-					(reference "SW1")
+					(reference "EN1")
 					(unit 1)
 				)
 			)
@@ -3527,7 +3527,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "325315c4-9cf3-4e27-b513-d080a7f66da0")
-		(property "Reference" "SW2"
+		(property "Reference" "BOOT1"
 			(at 266.7 40.64 0)
 			(effects
 				(font
@@ -3588,7 +3588,7 @@
 		(instances
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/0cd82055-ce21-4aed-acf2-771a9b05e7c5"
-					(reference "SW2")
+					(reference "BOOT1")
 					(unit 1)
 				)
 			)
