@@ -1716,6 +1716,12 @@
 		(uuid "524e7efe-4dc2-4766-9480-2f862ab17ba1")
 	)
 	(junction
+		(at 120.65 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5a10744d-8659-4df6-be5e-5712a90db333")
+	)
+	(junction
 		(at 172.72 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2005,6 +2011,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 74.93) (xy 120.65 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c847b6d-8b13-4d00-91db-13fb245200a3")
+	)
+	(wire
+		(pts
 			(xy 157.48 97.79) (xy 208.28 97.79)
 		)
 		(stroke
@@ -2135,7 +2151,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 77.47) (xy 127 77.47)
+			(xy 110.49 77.47) (xy 120.65 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2562,6 +2578,16 @@
 			(type default)
 		)
 		(uuid "91df0f66-082e-4f19-850d-b18ed3f63d35")
+	)
+	(wire
+		(pts
+			(xy 120.65 77.47) (xy 127 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "939db12c-4591-4e5b-ac0d-2a7158aa847f")
 	)
 	(wire
 		(pts
@@ -3065,6 +3091,16 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 64.77) (xy 120.65 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdb06120-3ff5-4f9f-a95b-3aa416aacc2b")
+	)
+	(wire
+		(pts
 			(xy 144.78 71.12) (xy 144.78 72.39)
 		)
 		(stroke
@@ -3113,6 +3149,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VL"
+		(shape input)
+		(at 120.65 64.77 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "38ef0f77-664d-40d4-b1b8-fd032bf47fd8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.65 60.6887 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -3530,6 +3588,103 @@
 			(project "PM3_Audio_and_DMX"
 				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c"
 					(reference "#PWR076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 120.65 71.12 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07cbcff7-c47f-4445-9fcf-93f9754bb20f")
+		(property "Reference" "R64"
+			(at 123.19 69.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 123.19 72.3899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 122.428 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GPR060310K"
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 120.65 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "accb7a50-4b77-4aa7-9f3a-45842dcf688c")
+		)
+		(pin "2"
+			(uuid "f0a94f1e-31ad-421e-a7c9-0e429152b1d3")
+		)
+		(instances
+			(project "PM3_Audio_and_DMX"
+				(path "/1f276d59-ad9b-4e70-a842-f3b7e562eb9b/2329d9ea-d5d7-4913-84c5-e85a54af032e/5f71fd42-8f86-4900-bb58-dbcd17a8cc2c"
+					(reference "R64")
 					(unit 1)
 				)
 			)
