@@ -122,8 +122,6 @@ void codec_clear_data_ready(void);
  *
  * @note Should be called as soon as possible after `codec_data_ready()`
  *       returns true to ensure proper synchronization with the DMA transfer.
- *
- *       Must be implemented by the student, only an empty function as a placeholder
  */
 void codec_update_output_buffer(uint8_t channel, float32_t *data, uint32_t size);
 
@@ -135,8 +133,6 @@ void codec_update_output_buffer(uint8_t channel, float32_t *data, uint32_t size)
  * mono signal derived from the left channel, output to both stereo channels.
  * The function should be called immediately after codec data ready to ensure
  * that the data is copied before it is output.
- *
- * Must be implemented by the student, only an empty function as a placeholder!
  */
 void codec_mirror_left_channel(void);
 

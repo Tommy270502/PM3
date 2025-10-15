@@ -71,9 +71,6 @@ static void sai_dma_init(void);
  * @param left_out Pointer to the output buffer for left channel samples.
  * @param right_out Pointer to the output buffer for right channel samples.
  * @param out_buffer_size size of each output buffer.
- *
- * Must be implemented by the student, only an empty function as a placeholder!
- *
  */
 static void split_and_cast_i2s_buffer(int32_t *i2s_buffer, float32_t *left_out,
 		float32_t *right_out, uint32_t out_buffer_size);
@@ -278,7 +275,18 @@ void codec_clear_data_ready(void) {
 }
 
 void codec_mirror_left_channel(void) {
-	// Must be implemented by the student, only an empty function as a placeholder!
+	// Copy left channel samples to right channel in the output buffer
+	// This creates a mono output (left channel duplicated to both L and R)
+	
+	// Determine which output buffer is currently being prepared for next DMA transfer
+	int32_t *current_out_buffer = next_audio_out_buffer_pointer;
+	
+	// Iterate through the interleaved I²S buffer
+	// Format: [L0, R0, L1, R1, L2, R2, ...]
+	for (uint32_t i = 0; i < AUDIO_FRAME_SIZE; i += 2) {
+		// Copy left channel sample (even index) to right channel (odd index)
+		current_out_buffer[i + 1] = current_out_buffer[i];
+	}
 }
 
 static void sai_dma_init(void) {
@@ -396,11 +404,48 @@ static void sai_dma_init(void) {
 
 static void split_and_cast_i2s_buffer(int32_t *i2s_buffer, float32_t *left_out,
 		float32_t *right_out, uint32_t out_buffer_size) {
-	// Must be implemented by the student, only an empty function as a placeholder!
+	// I²S format: interleaved stereo data (left, right, left, right...)
+	// Each 32-bit sample contains 24-bit audio data left-aligned
+	// Need to shift right by 8 bits to get the actual 24-bit value
+	
+	for (uint32_t i = 0; i < out_buffer_size; i++) {
+		// Left channel is at even indices (0, 2, 4, ...)
+		// Shift right by 8 bits to align 24-bit data, then cast to float
+		left_out[i] = (float32_t)(i2s_buffer[i * 2] >> 8);
+		
+		// Right channel is at odd indices (1, 3, 5, ...)
+		// Shift right by 8 bits to align 24-bit data, then cast to float
+		right_out[i] = (float32_t)(i2s_buffer[i * 2 + 1] >> 8);
+	}
 }
 
 void codec_update_output_buffer(uint8_t channel, float32_t *data, uint32_t size) {
-	// Must be implemented by the student, only an empty function as a placeholder
+	// Update the audio output buffer for a specific channel
+	// channel: 0 = left, 1 = right
+	// data: pointer to float32 audio samples
+	// size: number of samples to copy
+	
+	// Ensure size doesn't exceed half the frame size (one channel)
+	if (size > AUDIO_CHANNEL_SIZE) {
+		size = AUDIO_CHANNEL_SIZE;
+	}
+	
+	// Determine which output buffer to update
+	int32_t *current_out_buffer = next_audio_out_buffer_pointer;
+	
+	// Convert float32 samples to 32-bit I²S format and write to interleaved buffer
+	for (uint32_t i = 0; i < size; i++) {
+		// Convert float to int32 and shift left by 8 bits (24-bit data left-aligned)
+		int32_t sample = ((int32_t)data[i]) << 8;
+		
+		if (channel == 0) {
+			// Left channel: write to even indices (0, 2, 4, ...)
+			current_out_buffer[i * 2] = sample;
+		} else {
+			// Right channel: write to odd indices (1, 3, 5, ...)
+			current_out_buffer[i * 2 + 1] = sample;
+		}
+	}
 }
 
 void DMA2_Stream1_IRQHandler(void) {
@@ -410,23 +455,45 @@ void DMA2_Stream1_IRQHandler(void) {
 		if ((DMA2_Stream1->CR & DMA_SxCR_CT) == 0) {
 			// data is ready in the "audio_in_buffer_pong"
 
-			// ToDo: Copy the data to the corresponding out_buffer for the audio loop
+			// Copy the data to the corresponding out_buffer for the audio loop
+			for (uint32_t i = 0; i < AUDIO_FRAME_SIZE; i++) {
+				next_audio_out_buffer_pointer[i] = audio_in_buffer_pong[i];
+			}
 
 			if ((left_channel_buffer_pointer != 0)
 					&& (right_channel_buffer_pointer != 0)) {
-				// ToDo: Copy and cast the data to the  right_channel_buffer_pointer and left_channel_buffer_pointer
+				// Copy and cast the data to the right_channel_buffer_pointer and left_channel_buffer_pointer
+				split_and_cast_i2s_buffer(audio_in_buffer_pong, 
+					left_channel_buffer_pointer, 
+					right_channel_buffer_pointer, 
+					AUDIO_CHANNEL_SIZE);
 			}
 		} else {
 
 			// data is ready in the "audio_in_buffer_ping"
 
-			// ToDo: Copy the data to the corresponding out_buffer for the audio loop
+			// Copy the data to the corresponding out_buffer for the audio loop
+			for (uint32_t i = 0; i < AUDIO_FRAME_SIZE; i++) {
+				next_audio_out_buffer_pointer[i] = audio_in_buffer_ping[i];
+			}
 
 			if ((left_channel_buffer_pointer != 0)
 					&& (right_channel_buffer_pointer != 0)) {
-				// ToDo: Copy and cast the data to the  right_channel_buffer_pointer and left_channel_buffer_pointer
+				// Copy and cast the data to the right_channel_buffer_pointer and left_channel_buffer_pointer
+				split_and_cast_i2s_buffer(audio_in_buffer_ping, 
+					left_channel_buffer_pointer, 
+					right_channel_buffer_pointer, 
+					AUDIO_CHANNEL_SIZE);
 			}
 		}
+		
+		// Toggle output buffer pointer for next DMA cycle
+		if (next_audio_out_buffer_pointer == audio_out_buffer_ping) {
+			next_audio_out_buffer_pointer = audio_out_buffer_pong;
+		} else {
+			next_audio_out_buffer_pointer = audio_out_buffer_ping;
+		}
+		
 		audio_codec_data_ready = 1;
 
 	}
