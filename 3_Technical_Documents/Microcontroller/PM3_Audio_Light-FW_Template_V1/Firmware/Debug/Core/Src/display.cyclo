@@ -1,6 +1,0 @@
-../Core/Src/display.c:43:6:disp_clear_data	1
-../Core/Src/display.c:59:6:disp_name_value	1
-../Core/Src/display.c:78:6:disp_curves	6
-../Core/Src/display.c:126:6:disp_bars	4
-../Core/Src/display.c:158:6:disp_light_bars	14
-../Core/Src/display.c:228:6:disp_level	14
