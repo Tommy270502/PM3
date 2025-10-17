@@ -133,11 +133,22 @@ int main(void) {
 		switch (MENU_get_transition()) {	// Handle user menu transitions
 		case MENU_NONE:	// No transition => do nothing
 			break;
+		case MENU_SCROLL_LEFT:	// Scroll menu left
+			MENU_scroll_left();
+			break;
+		case MENU_SCROLL_RIGHT:	// Scroll menu right
+			MENU_scroll_right();
+			break;
 		case MENU_ZERO:
 		case MENU_ONE:
 		case MENU_TWO:
 		case MENU_THREE:
 		case MENU_FOUR:
+		case MENU_FIVE:
+		case MENU_SIX:
+		case MENU_SEVEN:
+		case MENU_EIGHT:
+		case MENU_NINE:
 			disp_refresh = true;	// Switch to new menu item
 			break;
 		default:	// Should never occur
@@ -212,6 +223,13 @@ int main(void) {
 					disp_clear_data();
 					//ToDo ....
 				}
+				break;
+			case MENU_FIVE:
+			case MENU_SIX:
+			case MENU_SEVEN:
+			case MENU_EIGHT:
+			case MENU_NINE:
+				// ToDo ....
 				break;
 			default:
 				// Should never occur
