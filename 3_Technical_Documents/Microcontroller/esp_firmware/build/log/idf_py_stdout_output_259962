@@ -1,0 +1,717 @@
+Command: /home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/thomas/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/thomas/esp/BT_LE/build/BT_LE.elf /home/thomas/esp/BT_LE/build/bootloader/bootloader.elf -m '/home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/thomas/esp/esp-idf/tools/idf.py'
+0 size=06778h �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (28) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:26:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a60h (150112) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034a88 vaddr=3ffbdb60 size=04e10h ( 19984) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=000398a0 vaddr=40080000 size=06778h ( 26488) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b67e8h (747496) map[0m
+[0;32mI (428) esp_image: segment 4: paddr=000f6810 vaddr=40086778 size=17e18h ( 97816) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=0010e630 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (483) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (483) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (503) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (503) cpu_start: Pro cpu start user code[0m
+[0;32mI (504) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (505) app_init: Application information:[0m
+[0;32mI (509) app_init: Project name:     BT_LE[0m
+[0;32mI (513) app_init: App version:      1[0m
+[0;32mI (516) app_init: Compile time:     Oct 18 2025 19:26:42[0m
+[0;32mI (521) app_init: ELF file SHA256:  c45a5ef5d...[0m
+[0;32mI (526) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (531) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (535) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (539) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (543) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (549) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (554) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFCB088 len 00014F78 (83 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (581) heap_init: At 4009E590 len 00001A70 (6 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (589) spi_flash: flash io: dio[0m
+[0;33mW (592) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (606) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (611) main_task: Started on CPU0[0m
+[0;32mI (621) main_task: Calling app_main()[0m
+[0;32mI (641) BTDM_INIT: BT controller compile version [89b2ff7][0m
+[0;32mI (641) BTDM_INIT: Bluetooth MAC: 08:3a:f2:ac:6a:7e[0m
+[0;32mI (651) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1231) BT_AV: Own address:[08:3a:f2:ac:6a:7e][0m
+[0;32mI (1241) BT_AV: Starting device discovery...[0m
+[1;31mE (1241) RC_CT: Invalid AVRC event: 10[0m
+[0;33mW (1241) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1251) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1251) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1271) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1281) BT_AV: event: 10[0m
+[0;32mI (1281) BT_AV: event: 10[0m
+[0;32mI (1281) BT_AV: event: 10[0m
+[0;32mI (1281) BT_AV: event: 10[0m
+[0;32mI (1281) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1291) BT_AV: Discovery started.[0m
+[0;32mI (1291) main_task: Returned from app_main()[0m
+[0;32mI (4351) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (4351) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-84[0m
+[0;32mI (4501) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (5611) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (6191) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (6191) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-84[0m
+[0;32mI (6741) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (6861) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (6861) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-83[0m
+[0;32mI (7021) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7031) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (8501) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8621) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8621) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-94[0m
+[0;32mI (9391) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (9391) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (11221) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (11221) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-84[0m
+[0;32mI (11241) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11351) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (11941) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (12071) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (12591) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (12591) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-89[0m
+[0;32mI (12891) BT_AV: Scanned device: 50:1b:6a:ac:97:cb[0m
+[0;32mI (12891) BT_AV: --Name: ACTON III  RSSI:-52[0m
+[0;32mI (12891) BT_AV: Found target device: ACTON III [50:1b:6a:ac:97:cb][0m
+[0;32mI (12901) BT_AV: Cancel device discovery ...[0m
+[0;32mI (12911) BT_AV: Device discovery stopped.[0m
+[0;32mI (12911) BT_AV: a2dp connecting to peer: ACTON III[0m
+[0;33mW (12911) BT_APPL: reset flags[0m
+[0;32mI (12921) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (13541) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (13561) BT_AV: event: 16[0m
+[0;32mI (13801) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (13811) BT_AV: Input pin code: 1234[0m
+[0;33mW (14191) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (14191) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (14191) BT_AV: event: 17[0m
+[1;31mE (14211) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (14211) BT_AV: authentication failed, status: 9[0m
+[0;33mW (14211) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (14211) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (21241) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (21241) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (21241) BT_APPL: reset flags[0m
+[0;32mI (21251) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (21731) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (21741) BT_AV: event: 16[0m
+[0;32mI (22121) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (22121) BT_AV: Input pin code: 1234[0m
+[0;33mW (22561) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (22561) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (22561) BT_AV: event: 17[0m
+[1;31mE (22581) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (22581) BT_AV: authentication failed, status: 9[0m
+[0;33mW (22581) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (22581) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (31241) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (31241) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (31241) BT_APPL: reset flags[0m
+[0;32mI (31251) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (31701) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (31711) BT_AV: event: 16[0m
+[0;32mI (32061) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (32061) BT_AV: Input pin code: 1234[0m
+[0;33mW (32521) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (32521) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (32521) BT_AV: event: 17[0m
+[1;31mE (32541) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (32541) BT_AV: authentication failed, status: 9[0m
+[0;33mW (32541) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (32541) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (28) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:26:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a60h (150112) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034a88 vaddr=3ffbdb60 size=04e10h ( 19984) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=000398a0 vaddr=40080000 size=06778h ( 26488) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b67e8h (747496) map[0m
+[0;32mI (428) esp_image: segment 4: paddr=000f6810 vaddr=40086778 size=17e18h ( 97816) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=0010e630 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (483) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (483) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (503) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (503) cpu_start: Pro cpu start user code[0m
+[0;32mI (503) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (505) app_init: Application information:[0m
+[0;32mI (509) app_init: Project name:     BT_LE[0m
+[0;32mI (513) app_init: App version:      1[0m
+[0;32mI (516) app_init: Compile time:     Oct 18 2025 19:26:42[0m
+[0;32mI (521) app_init: ELF file SHA256:  c45a5ef5d...[0m
+[0;32mI (526) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (531) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (535) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (539) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (543) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (549) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (554) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFCB088 len 00014F78 (83 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (580) heap_init: At 4009E590 len 00001A70 (6 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (589) spi_flash: flash io: dio[0m
+[0;33mW (592) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (606) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (610) main_task: Started on CPU0[0m
+[0;32mI (620) main_task: Calling app_main()[0m
+[0;32mI (640) BTDM_INIT: BT controller compile version [89b2ff7][0m
+[0;32mI (640) BTDM_INIT: Bluetooth MAC: 08:3a:f2:ac:6a:7e[0m
+[0;32mI (650) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1250) BT_AV: Own address:[08:3a:f2:ac:6a:7e][0m
+[0;32mI (1260) BT_AV: Starting device discovery...[0m
+[1;31mE (1260) RC_CT: Invalid AVRC event: 10[0m
+[0;33mW (1260) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1270) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1270) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1290) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1310) BT_AV: Discovery started.[0m
+[0;32mI (1310) main_task: Returned from app_main()[0m
+[0;32mI (1350) BT_AV: Scanned device: 50:1b:6a:ac:97:cb[0m
+[0;32mI (1360) BT_AV: --Name: ACTON III  RSSI:-63[0m
+[0;32mI (1360) BT_AV: Found target device: ACTON III [50:1b:6a:ac:97:cb][0m
+[0;32mI (1360) BT_AV: Cancel device discovery ...[0m
+[0;32mI (1370) BT_AV: Device discovery stopped.[0m
+[0;32mI (1370) BT_AV: a2dp connecting to peer: ACTON III[0m
+[0;33mW (1370) BT_APPL: reset flags[0m
+[0;32mI (1380) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (2120) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (2130) BT_AV: event: 16[0m
+[0;32mI (2600) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (2600) BT_AV: Input pin code: 1234[0m
+[0;33mW (3050) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (3050) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (3050) BT_AV: event: 17[0m
+[1;31mE (3070) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (3070) BT_AV: authentication failed, status: 9[0m
+[0;33mW (3070) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (3070) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (11260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (11260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (11260) BT_APPL: reset flags[0m
+[0;32mI (11270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (11910) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (11920) BT_AV: event: 16[0m
+[0;32mI (12400) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (12400) BT_AV: Input pin code: 1234[0m
+[0;33mW (12800) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (12800) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (12800) BT_AV: event: 17[0m
+[1;31mE (12820) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (12820) BT_AV: authentication failed, status: 9[0m
+[0;33mW (12820) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (12820) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (21260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (21260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (21260) BT_APPL: reset flags[0m
+[0;32mI (21270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (22330) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (22340) BT_AV: event: 16[0m
+[0;32mI (22740) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (22740) BT_AV: Input pin code: 1234[0m
+[0;33mW (23140) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (23140) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (23140) BT_AV: event: 17[0m
+[1;31mE (23160) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (23160) BT_AV: authentication failed, status: 9[0m
+[0;33mW (23160) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (23160) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (31260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (31260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (31260) BT_APPL: reset flags[0m
+[0;32mI (31270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (32050) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (32060) BT_AV: event: 16[0m
+[0;32mI (32650) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (32650) BT_AV: Input pin code: 1234[0m
+[0;33mW (33110) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (33110) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (33110) BT_AV: event: 17[0m
+[1;31mE (33130) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (33130) BT_AV: authentication failed, status: 9[0m
+[0;33mW (33130) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (33130) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (41260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (41260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (41260) BT_APPL: reset flags[0m
+[0;32mI (41270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (41840) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (41850) BT_AV: event: 16[0m
+[0;32mI (42350) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (42350) BT_AV: Input pin code: 1234[0m
+[0;33mW (42760) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (42760) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (42760) BT_AV: event: 17[0m
+[1;31mE (42780) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (42780) BT_AV: authentication failed, status: 9[0m
+[0;33mW (42780) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (42780) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (51260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (51260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (51260) BT_APPL: reset flags[0m
+[0;32mI (51270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (51720) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (51730) BT_AV: event: 16[0m
+[0;32mI (52240) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (52240) BT_AV: Input pin code: 1234[0m
+[0;33mW (52650) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (52650) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (52650) BT_AV: event: 17[0m
+[1;31mE (52670) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (52670) BT_AV: authentication failed, status: 9[0m
+[0;33mW (52670) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (52670) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (61260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (61260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (61260) BT_APPL: reset flags[0m
+[0;32mI (61270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (62260) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (62270) BT_AV: event: 16[0m
+[0;32mI (62710) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (62710) BT_AV: Input pin code: 1234[0m
+[0;33mW (63150) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (63150) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (63150) BT_AV: event: 17[0m
+[1;31mE (63170) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (63170) BT_AV: authentication failed, status: 9[0m
+[0;33mW (63170) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (63170) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (71260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (71260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (71260) BT_APPL: reset flags[0m
+[0;32mI (71270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (72050) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (72060) BT_AV: event: 16[0m
+[0;32mI (72480) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (72480) BT_AV: Input pin code: 1234[0m
+[0;33mW (72890) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (72890) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (72890) BT_AV: event: 17[0m
+[1;31mE (72910) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (72910) BT_AV: authentication failed, status: 9[0m
+[0;33mW (72910) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (72910) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (81260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (81260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (81260) BT_APPL: reset flags[0m
+[0;32mI (81270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (82400) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (82410) BT_AV: event: 16[0m
+[0;32mI (82960) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (82960) BT_AV: Input pin code: 1234[0m
+[0;33mW (83410) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (83410) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (83410) BT_AV: event: 17[0m
+[1;31mE (83430) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (83430) BT_AV: authentication failed, status: 9[0m
+[0;33mW (83430) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (83430) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (91260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (91260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (91260) BT_APPL: reset flags[0m
+[0;32mI (91270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (91870) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (91880) BT_AV: event: 16[0m
+[0;32mI (92410) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (92410) BT_AV: Input pin code: 1234[0m
+[0;33mW (92810) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (92810) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (92810) BT_AV: event: 17[0m
+[1;31mE (92830) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (92830) BT_AV: authentication failed, status: 9[0m
+[0;33mW (92830) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (92830) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (101260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (101260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (101260) BT_APPL: reset flags[0m
+[0;32mI (101270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (101710) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (101720) BT_AV: event: 16[0m
+[0;32mI (102180) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (102180) BT_AV: Input pin code: 1234[0m
+[0;33mW (102650) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (102650) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (102650) BT_AV: event: 17[0m
+[1;31mE (102670) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (102670) BT_AV: authentication failed, status: 9[0m
+[0;33mW (102670) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (102670) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (111260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (111260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (111260) BT_APPL: reset flags[0m
+[0;32mI (111270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (112390) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (112400) BT_AV: event: 16[0m
+[0;32mI (112910) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (112910) BT_AV: Input pin code: 1234[0m
+[0;33mW (113330) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (113330) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (113330) BT_AV: event: 17[0m
+[1;31mE (113350) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (113350) BT_AV: authentication failed, status: 9[0m
+[0;33mW (113350) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (113350) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (121260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (121260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (121260) BT_APPL: reset flags[0m
+[0;32mI (121270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (121870) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (121880) BT_AV: event: 16[0m
+[0;32mI (122440) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (122440) BT_AV: Input pin code: 1234[0m
+[0;33mW (122900) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (122900) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (122900) BT_AV: event: 17[0m
+[1;31mE (122920) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (122920) BT_AV: authentication failed, status: 9[0m
+[0;33mW (122920) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (122920) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (131260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (131260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (131260) BT_APPL: reset flags[0m
+[0;32mI (131270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (131840) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (131850) BT_AV: event: 16[0m
+[0;32mI (132360) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (132370) BT_AV: Input pin code: 1234[0m
+[0;33mW (132770) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (132770) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (132770) BT_AV: event: 17[0m
+[1;31mE (132790) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (132790) BT_AV: authentication failed, status: 9[0m
+[0;33mW (132790) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (132790) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (141260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (141260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (141260) BT_APPL: reset flags[0m
+[0;32mI (141270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (142100) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (142110) BT_AV: event: 16[0m
+[0;32mI (142580) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (142580) BT_AV: Input pin code: 1234[0m
+[0;33mW (143040) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (143040) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (143040) BT_AV: event: 17[0m
+[1;31mE (143060) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (143060) BT_AV: authentication failed, status: 9[0m
+[0;33mW (143060) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (143060) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (151260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (151260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (151260) BT_APPL: reset flags[0m
+[0;32mI (151270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (151830) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (151840) BT_AV: event: 16[0m
+[0;32mI (152210) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (152210) BT_AV: Input pin code: 1234[0m
+[0;33mW (152660) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (152660) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (152660) BT_AV: event: 17[0m
+[1;31mE (152680) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (152680) BT_AV: authentication failed, status: 9[0m
+[0;33mW (152680) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (152680) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (161260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (161260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (161260) BT_APPL: reset flags[0m
+[0;32mI (161270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (161980) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (161990) BT_AV: event: 16[0m
+[0;32mI (162450) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (162450) BT_AV: Input pin code: 1234[0m
+[0;33mW (162880) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (162880) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (162880) BT_AV: event: 17[0m
+[1;31mE (162900) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (162900) BT_AV: authentication failed, status: 9[0m
+[0;33mW (162900) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (162900) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (171260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (171260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (171260) BT_APPL: reset flags[0m
+[0;32mI (171270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (172790) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (172800) BT_AV: event: 16[0m
+[0;32mI (173200) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (173200) BT_AV: Input pin code: 1234[0m
+[0;33mW (173640) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (173640) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (173640) BT_AV: event: 17[0m
+[1;31mE (173660) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (173660) BT_AV: authentication failed, status: 9[0m
+[0;33mW (173660) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (173660) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (181260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (181260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (181260) BT_APPL: reset flags[0m
+[0;32mI (181270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (182280) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (182290) BT_AV: event: 16[0m
+[0;32mI (182750) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (182750) BT_AV: Input pin code: 1234[0m
+[0;33mW (183160) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (183160) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (183160) BT_AV: event: 17[0m
+[1;31mE (183180) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (183180) BT_AV: authentication failed, status: 9[0m
+[0;33mW (183180) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (183180) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (191260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (191260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (191260) BT_APPL: reset flags[0m
+[0;32mI (191270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (191860) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (191870) BT_AV: event: 16[0m
+[0;32mI (192370) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (192370) BT_AV: Input pin code: 1234[0m
+[0;33mW (192780) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (192780) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (192780) BT_AV: event: 17[0m
+[1;31mE (192800) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (192800) BT_AV: authentication failed, status: 9[0m
+[0;33mW (192800) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (192800) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (201260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (201260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (201260) BT_APPL: reset flags[0m
+[0;32mI (201270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (202240) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (202250) BT_AV: event: 16[0m
+[0;32mI (202780) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (202780) BT_AV: Input pin code: 1234[0m
+[0;33mW (203260) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (203260) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (203260) BT_AV: event: 17[0m
+[1;31mE (203280) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (203280) BT_AV: authentication failed, status: 9[0m
+[0;33mW (203280) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (203280) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (211260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (211260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (211260) BT_APPL: reset flags[0m
+[0;32mI (211270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (211880) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (211890) BT_AV: event: 16[0m
+[0;32mI (212320) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (212320) BT_AV: Input pin code: 1234[0m
+[0;33mW (212770) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (212770) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (212770) BT_AV: event: 17[0m
+[1;31mE (212790) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (212790) BT_AV: authentication failed, status: 9[0m
+[0;33mW (212790) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (212790) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (221260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (221260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (221260) BT_APPL: reset flags[0m
+[0;32mI (221270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (222120) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (222130) BT_AV: event: 16[0m
+[0;32mI (222630) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (222630) BT_AV: Input pin code: 1234[0m
+[0;33mW (223040) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (223040) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (223040) BT_AV: event: 17[0m
+[1;31mE (223060) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (223060) BT_AV: authentication failed, status: 9[0m
+[0;33mW (223060) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (223060) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (231260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (231260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (231260) BT_APPL: reset flags[0m
+[0;32mI (231270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (231660) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (231670) BT_AV: event: 16[0m
+[0;32mI (232220) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (232230) BT_AV: Input pin code: 1234[0m
+[0;33mW (232620) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (232620) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (232620) BT_AV: event: 17[0m
+[1;31mE (232640) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (232640) BT_AV: authentication failed, status: 9[0m
+[0;33mW (232640) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (232640) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (241260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (241260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (241260) BT_APPL: reset flags[0m
+[0;32mI (241270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (242060) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (242070) BT_AV: event: 16[0m
+[0;32mI (242530) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (242530) BT_AV: Input pin code: 1234[0m
+[0;33mW (242970) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (242970) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (242970) BT_AV: event: 17[0m
+[1;31mE (242990) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (242990) BT_AV: authentication failed, status: 9[0m
+[0;33mW (242990) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (242990) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (251260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (251260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (251260) BT_APPL: reset flags[0m
+[0;32mI (251270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (251800) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (251820) BT_AV: event: 16[0m
+[0;32mI (252450) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (252450) BT_AV: Input pin code: 1234[0m
+[0;33mW (252910) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (252910) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (252910) BT_AV: event: 17[0m
+[1;31mE (252930) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (252930) BT_AV: authentication failed, status: 9[0m
+[0;33mW (252930) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (252930) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (261260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (261260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (261260) BT_APPL: reset flags[0m
+[0;32mI (261270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (261840) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (261850) BT_AV: event: 16[0m
+[0;32mI (262270) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (262270) BT_AV: Input pin code: 1234[0m
+[0;33mW (262680) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (262680) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (262680) BT_AV: event: 17[0m
+[1;31mE (262700) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (262700) BT_AV: authentication failed, status: 9[0m
+[0;33mW (262700) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (262700) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (271260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (271260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (271260) BT_APPL: reset flags[0m
+[0;32mI (271270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (272240) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (272250) BT_AV: event: 16[0m
+[0;32mI (272680) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (272680) BT_AV: Input pin code: 1234[0m
+[0;33mW (273110) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (273110) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (273110) BT_AV: event: 17[0m
+[1;31mE (273130) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (273130) BT_AV: authentication failed, status: 9[0m
+[0;33mW (273130) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (273130) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (281260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (281260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (281260) BT_APPL: reset flags[0m
+[0;32mI (281270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (281960) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (281970) BT_AV: event: 16[0m
+[0;32mI (282510) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (282520) BT_AV: Input pin code: 1234[0m
+[0;33mW (282960) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (282960) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (282960) BT_AV: event: 17[0m
+[1;31mE (282980) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (282980) BT_AV: authentication failed, status: 9[0m
+[0;33mW (282980) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (282980) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (291260) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (291260) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (291260) BT_APPL: reset flags[0m
+[0;32mI (291270) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (291840) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (291850) BT_AV: event: 16[0m
+[0;32mI (292420) BT_AV: ESP_BT_GAP_PIN_REQ_EVT min_16_digit: 0[0m
+[0;32mI (292420) BT_AV: Input pin code: 1234[0m
+[0;33mW (292810) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x6 dev_find 1[0m
+[0;33mW (292810) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (292810) BT_AV: event: 17[0m
+[1;31mE (292830) BT_BTC:  btc_dm_auth_cmpl_evt() Authentication fail reason 5[0m
+[1;31mE (292830) BT_AV: authentication failed, status: 9[0m
+[0;33mW (292830) BT_BTC: BTA_AV_OPEN_EVT::FAILED status: 3[0m
+
+[0;32mI (292830) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m

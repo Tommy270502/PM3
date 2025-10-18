@@ -1,0 +1,623 @@
+Command: /home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/thomas/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/thomas/esp/BT_LE/build/BT_LE.elf /home/thomas/esp/BT_LE/build/bootloader/bootloader.elf -m '/home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/thomas/esp/esp-idf/tools/idf.py'
+I�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (28) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:26:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a20h (150048) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034a48 vaddr=3ffbdb60 size=04e10h ( 19984) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00039860 vaddr=40080000 size=067b8h ( 26552) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b67a4h (747428) map[0m
+[0;32mI (428) esp_image: segment 4: paddr=000f67cc vaddr=400867b8 size=17dd8h ( 97752) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=0010e5ac vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (483) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (483) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (503) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (503) cpu_start: Pro cpu start user code[0m
+[0;32mI (503) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (505) app_init: Application information:[0m
+[0;32mI (509) app_init: Project name:     BT_LE[0m
+[0;32mI (513) app_init: App version:      1[0m
+[0;32mI (516) app_init: Compile time:     Oct 18 2025 19:42:44[0m
+[0;32mI (521) app_init: ELF file SHA256:  dd8968244...[0m
+[0;32mI (526) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (531) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (535) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (539) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (543) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (549) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (554) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFCB090 len 00014F70 (83 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (580) heap_init: At 4009E590 len 00001A70 (6 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (589) spi_flash: flash io: dio[0m
+[0;33mW (592) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (606) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (610) main_task: Started on CPU0[0m
+[0;32mI (620) main_task: Calling app_main()[0m
+[0;32mI (640) BTDM_INIT: BT controller compile version [89b2ff7][0m
+[0;32mI (640) BTDM_INIT: Bluetooth MAC: 08:3a:f2:ac:6a:7e[0m
+[0;32mI (650) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (720) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1290) BT_AV: Own address:[08:3a:f2:ac:6a:7e][0m
+[0;32mI (1300) BT_AV: Starting device discovery...[0m
+[1;31mE (1300) RC_CT: Invalid AVRC event: 10[0m
+[0;33mW (1300) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1300) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1310) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1330) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1340) BT_AV: event: 10[0m
+[0;32mI (1340) BT_AV: event: 10[0m
+[0;32mI (1340) BT_AV: event: 10[0m
+[0;32mI (1340) BT_AV: event: 10[0m
+[0;32mI (1340) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1350) BT_AV: Discovery started.[0m
+[0;32mI (1350) main_task: Returned from app_main()[0m
+[0;32mI (1670) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (1680) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-89[0m
+[0;32mI (1910) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (1910) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (2420) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (2420) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (3460) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (4380) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (4380) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (4510) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (4510) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (7030) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7030) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (7540) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7540) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (7660) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7660) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (8010) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8010) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-90[0m
+[0;32mI (8140) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8150) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-91[0m
+[0;32mI (8270) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8410) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (9340) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (10910) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (10910) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-90[0m
+[0;32mI (11300) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11870) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (11870) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-89[0m
+[0;32mI (12480) BT_AV: Scanned device: 50:1b:6a:ac:97:cb[0m
+[0;32mI (12490) BT_AV: --Name: ACTON III  RSSI:-51[0m
+[0;32mI (12490) BT_AV: Found target device: ACTON III [50:1b:6a:ac:97:cb][0m
+[0;32mI (12490) BT_AV: Cancel device discovery ...[0m
+[0;32mI (12500) BT_AV: Device discovery stopped.[0m
+[0;32mI (12500) BT_AV: a2dp connecting to peer: ACTON III[0m
+[0;33mW (12500) BT_APPL: reset flags[0m
+[0;32mI (12510) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (12750) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (12760) BT_AV: event: 16[0m
+[0;32mI (13030) BT_AV: event: 21[0m
+[0;32mI (13200) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x2[0m
+[0;32mI (13240) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x9[0m
+[0;32mI (13240) BT_AV: bt_app_av_state_connecting_hdlr, delay value: 1500 * 1/10 ms[0m
+[0;33mW (13330) BT_APPL: new conn_srvc id:18, app_id:0[0m
+[0;32mI (13340) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (13340) BT_AV: a2dp connected[0m
+[0;32mI (14950) RC_CT: AVRC conn_state event: state 1, [50:1b:6a:ac:97:cb][0m
+[0;32mI (14950) RC_CT: AVRC remote features 24b, TG features 2[0m
+[0;32mI (15000) RC_CT: remote rn_cap: count 1, bitmask 0x2000[0m
+[0;33mW (18780) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (18780) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 2[0m
+[0;33mW (21260) BT_HCI: hci cmd send: unsniff: hdl 0x80[0m
+[0;33mW (21270) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;33mW (21270) BT_HCI: opcode=0x0804, status= 0c: Cmd Disallowed[0m
+[0;32mI (21270) RC_CT: AVRC conn_state event: state 0, [00:00:00:00:00:00][0m
+[0;32mI (21270) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 0[0m
+[0;32mI (21300) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (21300) BT_AV: a2dp media ready checking ...[0m
+[0;33mW (21310) BT_APPL: bta_dm_act no entry for connected service cbs[0m
+[0;32mI (21320) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x3[0m
+[0;32mI (21320) BT_AV: a2dp media ready, starting ...[0m
+[0;32mI (21320) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x0[0m
+[0;32mI (21320) BT_AV: a2dp disconnected[0m
+[0;32mI (21330) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0x3[0m
+[0;33mW (23810) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (23810) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 2[0m
+[0;33mW (25320) BT_HCI: hci cmd send: disconnect: hdl 0x80, rsn:0x13[0m
+[0;33mW (30750) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x8 dev_find 1[0m
+[0;32mI (30750) BT_AV: event: 17[0m
+[0;32mI (31300) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (31300) BT_AV: a2dp connecting to peer: 50:1b:6a:ac:97:cb[0m
+[0;33mW (31300) BT_APPL: reset flags[0m
+[0;32mI (31300) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (31670) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (31680) BT_AV: event: 16[0m
+[0;32mI (32520) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x2[0m
+[0;32mI (32620) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x9[0m
+[0;32mI (32620) BT_AV: bt_app_av_state_connecting_hdlr, delay value: 1500 * 1/10 ms[0m
+[0;33mW (32810) BT_APPL: new conn_srvc id:18, app_id:0[0m
+[0;32mI (32820) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (32820) BT_AV: a2dp connected[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (28) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:26:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a20h (150048) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034a48 vaddr=3ffbdb60 size=04e10h ( 19984) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00039860 vaddr=40080000 size=067b8h ( 26552) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b67a4h (747428) map[0m
+[0;32mI (428) esp_image: segment 4: paddr=000f67cc vaddr=400867b8 size=17dd8h ( 97752) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=0010e5ac vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (483) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (483) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (503) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (503) cpu_start: Pro cpu start user code[0m
+[0;32mI (503) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (505) app_init: Application information:[0m
+[0;32mI (509) app_init: Project name:     BT_LE[0m
+[0;32mI (513) app_init: App version:      1[0m
+[0;32mI (516) app_init: Compile time:     Oct 18 2025 19:42:44[0m
+[0;32mI (521) app_init: ELF file SHA256:  dd8968244...[0m
+[0;32mI (526) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (531) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (535) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (539) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (543) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (549) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (554) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFCB090 len 00014F70 (83 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (580) heap_init: At 4009E590 len 00001A70 (6 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (589) spi_flash: flash io: dio[0m
+[0;33mW (592) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (606) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (610) main_task: Started on CPU0[0m
+[0;32mI (620) main_task: Calling app_main()[0m
+[0;32mI (640) BTDM_INIT: BT controller compile version [89b2ff7][0m
+[0;32mI (640) BTDM_INIT: Bluetooth MAC: 08:3a:f2:ac:6a:7e[0m
+[0;32mI (650) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1250) BT_AV: Own address:[08:3a:f2:ac:6a:7e][0m
+[0;32mI (1260) BT_AV: Starting device discovery...[0m
+[1;31mE (1260) RC_CT: Invalid AVRC event: 10[0m
+[0;33mW (1260) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1270) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1270) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1290) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: event: 10[0m
+[0;32mI (1300) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1310) BT_AV: Discovery started.[0m
+[0;32mI (1310) main_task: Returned from app_main()[0m
+[0;32mI (2050) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (2290) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (2510) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (2510) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (4050) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (4050) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (5150) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (5150) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (5400) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7190) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (7190) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (8420) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8420) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (8570) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (8690) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (9840) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (9840) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (10530) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (10530) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (11260) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11900) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (11900) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (12510) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (12510) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (12840) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (13700) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (13700) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (13820) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (13820) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (13940) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (14110) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (14110) BT_AV: Discovery started.[0m
+[0;32mI (14430) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (14430) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-92[0m
+[0;32mI (15120) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (15360) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (15360) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (15490) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (16100) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (16110) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (16380) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (16380) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (16800) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (16800) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-91[0m
+[0;32mI (17190) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (17190) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (17650) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (17900) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (17900) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (18360) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (18360) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (20240) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (20240) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (20500) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (20500) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-83[0m
+[0;32mI (20830) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (20980) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (21260) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (21680) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (21680) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (21820) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (21820) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-84[0m
+[0;32mI (22180) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (22760) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (22760) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (22890) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (22890) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (23670) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (23670) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (26810) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (26810) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (26920) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (26920) BT_AV: Discovery started.[0m
+[0;32mI (28120) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (28120) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (30770) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (31210) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (31260) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (31360) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (31480) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (32030) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (32030) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (32480) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (32480) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-89[0m
+[0;32mI (32760) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (33000) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (33340) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (33480) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (33720) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (33720) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-90[0m
+[0;32mI (33970) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (34490) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (34490) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (35350) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (35350) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (36670) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (36670) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (37140) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (37140) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (37740) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (37870) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (37870) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (38230) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (38230) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (38480) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (38480) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-88[0m
+[0;32mI (38600) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (38600) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-89[0m
+[0;32mI (39160) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (39300) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (39300) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-90[0m
+[0;32mI (39420) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (39420) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-86[0m
+[0;32mI (39720) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (39730) BT_AV: Discovery started.[0m
+[0;32mI (40010) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (40470) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (40840) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (40840) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (41260) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (41860) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (43060) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (43060) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (44500) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (44500) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-85[0m
+[0;32mI (45770) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (45770) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-84[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (28) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 19:26:33[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a20h (150048) map[0m
+[0;32mI (142) esp_image: segment 1: paddr=00034a48 vaddr=3ffbdb60 size=04e10h ( 19984) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00039860 vaddr=40080000 size=067b8h ( 26552) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b67a4h (747428) map[0m
+[0;32mI (428) esp_image: segment 4: paddr=000f67cc vaddr=400867b8 size=17dd8h ( 97752) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=0010e5ac vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (483) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (483) boot: Disabling RNG early entropy source...[0m
+[0;32mI (495) cpu_start: Multicore app[0m
+[0;32mI (503) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (503) cpu_start: Pro cpu start user code[0m
+[0;32mI (503) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (505) app_init: Application information:[0m
+[0;32mI (509) app_init: Project name:     BT_LE[0m
+[0;32mI (513) app_init: App version:      1[0m
+[0;32mI (516) app_init: Compile time:     Oct 18 2025 19:42:44[0m
+[0;32mI (521) app_init: ELF file SHA256:  dd8968244...[0m
+[0;32mI (526) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (531) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (535) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (539) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (543) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (549) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (554) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFCB090 len 00014F70 (83 KiB): DRAM[0m
+[0;32mI (570) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (580) heap_init: At 4009E590 len 00001A70 (6 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (589) spi_flash: flash io: dio[0m
+[0;33mW (592) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (606) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (610) main_task: Started on CPU0[0m
+[0;32mI (620) main_task: Calling app_main()[0m
+[0;32mI (640) BTDM_INIT: BT controller compile version [89b2ff7][0m
+[0;32mI (640) BTDM_INIT: Bluetooth MAC: 08:3a:f2:ac:6a:7e[0m
+[0;32mI (650) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (1250) BT_AV: Own address:[08:3a:f2:ac:6a:7e][0m
+[0;33mW (1260) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1260) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1260) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1270) BT_AV: Starting device discovery...[0m
+[0;32mI (1280) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1290) BT_AV: event: 10[0m
+[0;32mI (1290) BT_AV: event: 10[0m
+[0;32mI (1290) BT_AV: event: 10[0m
+[0;32mI (1290) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1300) BT_AV: Discovery started.[0m
+[0;32mI (1300) main_task: Returned from app_main()[0m
+[0;32mI (2680) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (2680) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (5230) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (5230) BT_AV: --Name: [TV] Samsung QN85AA 55 TV  RSSI:-87[0m
+[0;32mI (5920) BT_AV: Scanned device: 54:3a:d6:70:1d:27[0m
+[0;32mI (6000) BT_AV: Scanned device: 50:1b:6a:ac:97:cb[0m
+[0;32mI (6000) BT_AV: --Name: ACTON III  RSSI:-49[0m
+[0;32mI (6000) BT_AV: Found target device: ACTON III [50:1b:6a:ac:97:cb][0m
+[0;32mI (6000) BT_AV: Cancel device discovery ...[0m
+[0;32mI (6010) BT_AV: Device discovery stopped.[0m
+[0;32mI (6010) BT_AV: a2dp connecting to peer: ACTON III[0m
+[0;33mW (6010) BT_APPL: reset flags[0m
+[0;32mI (6020) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;33mW (6640) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (6650) BT_AV: event: 16[0m
+[0;32mI (7000) BT_AV: event: 21[0m
+[0;32mI (7360) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x2[0m
+[0;32mI (7400) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x9[0m
+[0;32mI (7400) BT_AV: bt_app_av_state_connecting_hdlr, delay value: 1500 * 1/10 ms[0m
+[0;33mW (7560) BT_APPL: new conn_srvc id:18, app_id:0[0m
+[0;32mI (7560) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (7560) BT_AV: a2dp connected[0m
+[0;32mI (9230) RC_CT: AVRC conn_state event: state 1, [50:1b:6a:ac:97:cb][0m
+[0;32mI (9230) RC_CT: AVRC remote features 24b, TG features 2[0m
+[0;32mI (9300) RC_CT: remote rn_cap: count 1, bitmask 0x2000[0m
+[0;32mI (11270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (11270) BT_AV: a2dp media ready checking ...[0m
+[0;32mI (11270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x3[0m
+[0;32mI (11270) BT_AV: a2dp media ready, starting ...[0m
+[0;33mW (11280) BT_APPL: new conn_srvc id:18, app_id:1[0m
+[0;32mI (11400) BT_LOG: bta_av_link_role_ok hndl:x41 role:0 conn_audio:x1 bits:1 features:x864b[0m
+
+[0;32mI (11400) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x9[0m
+[0;32mI (11400) BT_AV: bt_app_av_state_connected_hdlr, delay value: 2000 * 1/10 ms[0m
+[0;32mI (11410) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x3[0m
+[0;32mI (11410) BT_AV: a2dp media start successfully.[0m
+[0;32mI (11420) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x1[0m
+[0;32mI (21270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31260) RC_CT: AVRC event notification: 13[0m
+[0;32mI (31260) RC_CT: Volume changed: 7[0m
+[0;32mI (31260) RC_CT: Set absolute volume: volume 12[0m
+[0;32mI (31270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31360) RC_CT: Set absolute volume response: volume 12[0m
+[0;32mI (31400) RC_CT: AVRC event notification: 13[0m
+[0;32mI (31400) RC_CT: Volume changed: 23[0m
+[0;32mI (31400) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (31530) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (31560) RC_CT: AVRC event notification: 13[0m
+[0;32mI (31560) RC_CT: Volume changed: 15[0m
+[0;32mI (31560) RC_CT: Set absolute volume: volume 20[0m
+[0;32mI (31660) RC_CT: Set absolute volume response: volume 20[0m
+[0;32mI (31710) RC_CT: AVRC event notification: 13[0m
+[0;32mI (31710) RC_CT: Volume changed: 35[0m
+[0;32mI (31710) RC_CT: Set absolute volume: volume 40[0m
+[0;32mI (31810) RC_CT: Set absolute volume response: volume 40[0m
+[0;32mI (31930) RC_CT: AVRC event notification: 13[0m
+[0;32mI (31930) RC_CT: Volume changed: 43[0m
+[0;32mI (31930) RC_CT: Set absolute volume: volume 48[0m
+[0;32mI (32010) RC_CT: Set absolute volume response: volume 48[0m
+[0;32mI (32970) RC_CT: AVRC event notification: 13[0m
+[0;32mI (32970) RC_CT: Volume changed: 43[0m
+[0;32mI (32980) RC_CT: Set absolute volume: volume 48[0m
+[0;32mI (33050) RC_CT: Set absolute volume response: volume 48[0m
+[0;32mI (33090) RC_CT: AVRC event notification: 13[0m
+[0;32mI (33090) RC_CT: Volume changed: 39[0m
+[0;32mI (33090) RC_CT: Set absolute volume: volume 44[0m
+[0;32mI (33140) RC_CT: Set absolute volume response: volume 44[0m
+[0;32mI (33220) RC_CT: AVRC event notification: 13[0m
+[0;32mI (33220) RC_CT: Volume changed: 43[0m
+[0;32mI (33220) RC_CT: Set absolute volume: volume 48[0m
+[0;32mI (33320) RC_CT: Set absolute volume response: volume 48[0m
+[0;32mI (33370) RC_CT: AVRC event notification: 13[0m
+[0;32mI (33370) RC_CT: Volume changed: 39[0m
+[0;32mI (33370) RC_CT: Set absolute volume: volume 44[0m
+[0;32mI (33460) RC_CT: Set absolute volume response: volume 44[0m
+[0;32mI (33490) RC_CT: AVRC event notification: 13[0m
+[0;32mI (33490) RC_CT: Volume changed: 43[0m
+[0;32mI (33490) RC_CT: Set absolute volume: volume 48[0m
+[0;32mI (33560) RC_CT: Set absolute volume response: volume 48[0m
+[0;32mI (33620) RC_CT: AVRC event notification: 13[0m
+[0;32mI (33620) RC_CT: Volume changed: 39[0m
+[0;32mI (33620) RC_CT: Set absolute volume: volume 44[0m
+[0;32mI (33720) RC_CT: Set absolute volume response: volume 44[0m
+[0;32mI (34630) RC_CT: AVRC event notification: 13[0m
+[0;32mI (34630) RC_CT: Volume changed: 39[0m
+[0;32mI (34630) RC_CT: Set absolute volume: volume 44[0m
+[0;32mI (34730) RC_CT: Set absolute volume response: volume 44[0m
+[0;32mI (34780) RC_CT: AVRC event notification: 13[0m
+[0;32mI (34780) RC_CT: Volume changed: 35[0m
+[0;32mI (34780) RC_CT: Set absolute volume: volume 40[0m
+[0;32mI (34860) RC_CT: Set absolute volume response: volume 40[0m
+[0;32mI (35060) RC_CT: AVRC event notification: 13[0m
+[0;32mI (35060) RC_CT: Volume changed: 35[0m
+[0;32mI (35060) RC_CT: Set absolute volume: volume 40[0m
+[0;32mI (35160) RC_CT: Set absolute volume response: volume 40[0m
+[0;32mI (35920) RC_CT: AVRC event notification: 13[0m
+[0;32mI (35920) RC_CT: Volume changed: 35[0m
+[0;32mI (35920) RC_CT: Set absolute volume: volume 40[0m
+[0;32mI (36010) RC_CT: Set absolute volume response: volume 40[0m
+[0;32mI (36040) RC_CT: AVRC event notification: 13[0m
+[0;32mI (36040) RC_CT: Volume changed: 31[0m
+[0;32mI (36040) RC_CT: Set absolute volume: volume 36[0m
+[0;32mI (36140) RC_CT: Set absolute volume response: volume 36[0m
+[0;32mI (41200) RC_CT: AVRC event notification: 13[0m
+[0;32mI (41200) RC_CT: Volume changed: 31[0m
+[0;32mI (41200) RC_CT: Set absolute volume: volume 36[0m
+[0;32mI (41270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (41300) RC_CT: Set absolute volume response: volume 36[0m
+[0;32mI (41300) RC_CT: AVRC event notification: 13[0m
+[0;32mI (41300) RC_CT: Volume changed: 27[0m
+[0;32mI (41300) RC_CT: Set absolute volume: volume 32[0m
+[0;32mI (41380) RC_CT: Set absolute volume response: volume 32[0m
+[0;32mI (41460) RC_CT: AVRC event notification: 13[0m
+[0;32mI (41460) RC_CT: Volume changed: 31[0m
+[0;32mI (41460) RC_CT: Set absolute volume: volume 36[0m
+[0;32mI (41530) RC_CT: Set absolute volume response: volume 36[0m
+[0;32mI (41740) RC_CT: AVRC event notification: 13[0m
+[0;32mI (41740) RC_CT: Volume changed: 31[0m
+[0;32mI (41740) RC_CT: Set absolute volume: volume 36[0m
+[0;32mI (41830) RC_CT: Set absolute volume response: volume 36[0m
+[0;32mI (41860) RC_CT: AVRC event notification: 13[0m
+[0;32mI (41860) RC_CT: Volume changed: 27[0m
+[0;32mI (41860) RC_CT: Set absolute volume: volume 32[0m
+[0;32mI (41980) RC_CT: Set absolute volume response: volume 32[0m
+[0;32mI (42060) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42060) RC_CT: Volume changed: 27[0m
+[0;32mI (42070) RC_CT: Set absolute volume: volume 32[0m
+[0;32mI (42130) RC_CT: Set absolute volume response: volume 32[0m
+[0;32mI (42190) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42190) RC_CT: Volume changed: 23[0m
+[0;32mI (42190) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (42280) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (42310) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42310) RC_CT: Volume changed: 27[0m
+[0;32mI (42310) RC_CT: Set absolute volume: volume 32[0m
+[0;32mI (42410) RC_CT: Set absolute volume response: volume 32[0m
+[0;32mI (42460) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42460) RC_CT: Volume changed: 23[0m
+[0;32mI (42460) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (42560) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (42560) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42560) RC_CT: Volume changed: 23[0m
+[0;32mI (42560) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (42650) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (42690) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42690) RC_CT: Volume changed: 19[0m
+[0;32mI (42690) RC_CT: Set absolute volume: volume 24[0m
+[0;32mI (42780) RC_CT: Set absolute volume response: volume 24[0m
+[0;32mI (42810) RC_CT: AVRC event notification: 13[0m
+[0;32mI (42810) RC_CT: Volume changed: 23[0m
+[0;32mI (42810) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (42870) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (43210) RC_CT: AVRC event notification: 13[0m
+[0;32mI (43210) RC_CT: Volume changed: 23[0m
+[0;32mI (43210) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (43270) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (43320) RC_CT: AVRC event notification: 13[0m
+[0;32mI (43330) RC_CT: Volume changed: 15[0m
+[0;32mI (43330) RC_CT: Set absolute volume: volume 20[0m
+[0;32mI (43390) RC_CT: Set absolute volume response: volume 20[0m
+[0;32mI (43440) RC_CT: AVRC event notification: 13[0m
+[0;32mI (43440) RC_CT: Volume changed: 23[0m
+[0;32mI (43440) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (43510) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (43720) RC_CT: AVRC event notification: 13[0m
+[0;32mI (43720) RC_CT: Volume changed: 23[0m
+[0;32mI (43720) RC_CT: Set absolute volume: volume 28[0m
+[0;32mI (43780) RC_CT: Set absolute volume response: volume 28[0m
+[0;32mI (43840) RC_CT: AVRC event notification: 13[0m
+[0;32mI (43840) RC_CT: Volume changed: 19[0m
+[0;32mI (43840) RC_CT: Set absolute volume: volume 24[0m
+[0;32mI (43910) RC_CT: Set absolute volume response: volume 24[0m
+[0;32mI (44050) RC_CT: AVRC event notification: 13[0m
+[0;32mI (44050) RC_CT: Volume changed: 19[0m
+[0;32mI (44050) RC_CT: Set absolute volume: volume 24[0m
+[0;32mI (44140) RC_CT: Set absolute volume response: volume 24[0m
+[0;32mI (44230) RC_CT: AVRC event notification: 13[0m
+[0;32mI (44230) RC_CT: Volume changed: 15[0m
+[0;32mI (44230) RC_CT: Set absolute volume: volume 20[0m
+[0;32mI (44310) RC_CT: Set absolute volume response: volume 20[0m
+[0;32mI (51270) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m

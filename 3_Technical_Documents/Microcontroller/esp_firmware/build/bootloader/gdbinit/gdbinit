@@ -1,0 +1,2 @@
+source /home/thomas/esp/BT_LE/build/bootloader/gdbinit/symbols
+source /home/thomas/esp/BT_LE/build/bootloader/gdbinit/connect

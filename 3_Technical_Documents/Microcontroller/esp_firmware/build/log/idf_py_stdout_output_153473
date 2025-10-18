@@ -1,0 +1,60 @@
+Command: /home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/thomas/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/thomas/esp/BT_LE/build/BT_LE.elf /home/thomas/esp/BT_LE/build/bootloader/bootloader.elf -m '/home/thomas/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/thomas/esp/esp-idf/tools/idf.py'
+I�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2980-gab149384e1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 18 2025 17:28:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09d50h ( 40272) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=00019d78 vaddr=3ffbdb60 size=038ech ( 14572) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001d66c vaddr=40080000 size=029ach ( 10668) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14d2ch ( 85292) map[0m
+[0;32mI (145) esp_image: segment 4: paddr=00034d54 vaddr=400829ac size=08d78h ( 36216) load[0m
+[0;32mI (160) esp_image: segment 5: paddr=0003dad4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (178) cpu_start: Multicore app[0m
+[0;32mI (186) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (192) app_init: Project name:     BT_LE[0m
+[0;32mI (196) app_init: App version:      1[0m
+[0;32mI (199) app_init: Compile time:     Oct 18 2025 18:03:15[0m
+[0;32mI (204) app_init: ELF file SHA256:  c26f96ce7...[0m
+[0;32mI (209) app_init: ESP-IDF:          v6.0-dev-2980-gab149384e1[0m
+[0;32mI (214) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (222) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (226) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (232) heap_init: At 3FFAE6E0 len 0000F480 (61 KiB): DRAM[0m
+[0;32mI (237) heap_init: At 3FFC1D28 len 0001E2D8 (120 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008B724 len 000148DC (82 KiB): IRAM[0m
+[0;32mI (261) spi_flash: detected chip: generic[0m
+[0;32mI (262) spi_flash: flash io: dio[0m
+[0;33mW (265) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (279) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (293) main_task: Calling app_main()[0m
+HelloI (293) main_task: Returned from app_main()

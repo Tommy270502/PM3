@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/thomas/esp/BT_LE/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
