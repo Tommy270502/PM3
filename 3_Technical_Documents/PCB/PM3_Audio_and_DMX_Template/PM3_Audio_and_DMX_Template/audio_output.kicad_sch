@@ -2234,15 +2234,15 @@
 		(fields_autoplaced yes)
 		(uuid "0c7aecc9-6803-4b05-ac2e-325a4817c6b2")
 		(property "Reference" "R43"
-			(at 96.52 37.465 90)
+			(at 96.52 36.83 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "4k42"
-			(at 96.52 40.005 90)
+		(property "Value" "4.53k"
+			(at 96.52 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2258,7 +2258,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 96.52 43.18 0)
 			(effects
 				(font
@@ -2275,7 +2275,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 96.52 43.18 90)
 			(effects
 				(font
@@ -2284,7 +2284,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TE Connectivity"
+		(property "Manufacturer" ""
 			(at 96.52 43.18 90)
 			(effects
 				(font
@@ -2523,7 +2523,7 @@
 				)
 			)
 		)
-		(property "Value" "4k42"
+		(property "Value" "4.53k"
 			(at 96.52 112.395 90)
 			(effects
 				(font
@@ -2540,7 +2540,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 96.52 115.57 0)
 			(effects
 				(font
@@ -2557,7 +2557,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 96.52 115.57 90)
 			(effects
 				(font
@@ -2566,7 +2566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TE Connectivity"
+		(property "Manufacturer" ""
 			(at 96.52 115.57 90)
 			(effects
 				(font
@@ -3282,15 +3282,15 @@
 		(fields_autoplaced yes)
 		(uuid "42fe2509-be27-410a-aca8-0310459ba07f")
 		(property "Reference" "C62"
-			(at 146.05 102.235 90)
+			(at 146.05 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "470p COG"
-			(at 146.05 104.775 90)
+		(property "Value" "470p"
+			(at 146.05 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3918,15 +3918,15 @@
 		(fields_autoplaced yes)
 		(uuid "73adb2a6-2135-4fe8-95f7-d0dc1c343a39")
 		(property "Reference" "R49"
-			(at 121.92 37.465 90)
+			(at 121.92 36.83 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "2k32"
-			(at 121.92 40.005 90)
+		(property "Value" "5.11k"
+			(at 121.92 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3942,7 +3942,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 121.92 43.18 0)
 			(effects
 				(font
@@ -3959,7 +3959,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 121.92 43.18 90)
 			(effects
 				(font
@@ -3968,7 +3968,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TE Connectivity"
+		(property "Manufacturer" ""
 			(at 121.92 43.18 90)
 			(effects
 				(font
@@ -4975,7 +4975,7 @@
 				)
 			)
 		)
-		(property "Value" "4.99k"
+		(property "Value" "2.26k"
 			(at 146.05 22.225 90)
 			(effects
 				(font
@@ -4992,7 +4992,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 146.05 25.4 0)
 			(effects
 				(font
@@ -5009,7 +5009,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 146.05 25.4 90)
 			(effects
 				(font
@@ -5018,7 +5018,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TE Connectivity"
+		(property "Manufacturer" ""
 			(at 146.05 25.4 90)
 			(effects
 				(font
@@ -5156,15 +5156,15 @@
 		(fields_autoplaced yes)
 		(uuid "c736c154-a2a9-48e5-bcdc-98c1e8bca2f5")
 		(property "Reference" "R51"
-			(at 121.92 109.855 90)
+			(at 121.92 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "2k32"
-			(at 121.92 112.395 90)
+		(property "Value" "5.11k"
+			(at 121.92 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5180,7 +5180,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 121.92 115.57 0)
 			(effects
 				(font
@@ -5197,7 +5197,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 121.92 115.57 90)
 			(effects
 				(font
@@ -5479,15 +5479,15 @@
 		(fields_autoplaced yes)
 		(uuid "d877397d-046f-4495-b604-6d121be04beb")
 		(property "Reference" "C61"
-			(at 146.05 29.845 90)
+			(at 146.05 29.21 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "470p COG"
-			(at 146.05 32.385 90)
+		(property "Value" "470p"
+			(at 146.05 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5885,7 +5885,7 @@
 				)
 			)
 		)
-		(property "Value" "4.99k"
+		(property "Value" "2.26k"
 			(at 146.05 94.615 90)
 			(effects
 				(font
@@ -5902,7 +5902,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 146.05 97.79 0)
 			(effects
 				(font
@@ -5919,7 +5919,7 @@
 				)
 			)
 		)
-		(property "MPN" "CPF0603F4K99C1"
+		(property "MPN" ""
 			(at 146.05 97.79 90)
 			(effects
 				(font
@@ -5928,7 +5928,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "TE Connectivity"
+		(property "Manufacturer" ""
 			(at 146.05 97.79 90)
 			(effects
 				(font

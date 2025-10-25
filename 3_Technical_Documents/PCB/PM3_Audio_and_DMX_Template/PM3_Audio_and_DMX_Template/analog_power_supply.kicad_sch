@@ -2133,7 +2133,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330k"
+		(property "Value" "301k"
 			(at 95.25 83.8199 0)
 			(effects
 				(font
@@ -2151,7 +2151,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 92.71 82.55 0)
 			(effects
 				(font
@@ -2169,7 +2169,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GPR0603330K"
+		(property "MPN" ""
 			(at 92.71 82.55 0)
 			(effects
 				(font
@@ -3632,7 +3632,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u CER"
+		(property "Value" "10u"
 			(at 55.88 81.2799 0)
 			(effects
 				(font
@@ -4316,7 +4316,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u CER"
+		(property "Value" "10u"
 			(at 121.92 85.0899 0)
 			(effects
 				(font

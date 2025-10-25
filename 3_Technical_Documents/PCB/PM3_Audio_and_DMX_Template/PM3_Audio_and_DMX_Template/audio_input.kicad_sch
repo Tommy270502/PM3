@@ -2092,8 +2092,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470p COG/X7R"
-			(at 126.746 88.9 90)
+		(property "Value" "470p"
+			(at 132.842 89.154 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,8 +3893,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470p COG/X7R"
-			(at 126.746 52.07 90)
+		(property "Value" "470p"
+			(at 132.842 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)

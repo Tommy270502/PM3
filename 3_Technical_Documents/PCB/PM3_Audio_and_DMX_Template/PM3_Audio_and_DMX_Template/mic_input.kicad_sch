@@ -1837,7 +1837,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7u TANT"
+		(property "Value" "4.7u TANTAL"
 			(at 78.359 80.01 90)
 			(effects
 				(font
@@ -3442,7 +3442,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7u TANT"
+		(property "Value" "4.7u TANTAL"
 			(at 141.351 82.55 90)
 			(effects
 				(font
