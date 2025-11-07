@@ -1667,6 +1667,28 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "R30 dnp"
+		(exclude_from_sim no)
+		(at 78.994 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "0bfeb122-8092-4bce-a0d8-845984649dd1")
+	)
+	(text "R29 dnp"
+		(exclude_from_sim no)
+		(at 58.928 113.284 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "2ff5e233-1dbb-414d-befe-807107513ab0")
+	)
 	(junction
 		(at 148.59 33.02)
 		(diameter 0)
@@ -4618,7 +4640,7 @@
 			)
 		)
 		(property "Value" "+3V0"
-			(at 121.92 15.24 90)
+			(at 121.92 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
