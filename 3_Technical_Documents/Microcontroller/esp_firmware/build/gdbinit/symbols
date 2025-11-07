@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /home/thomas/esp/BT_LE/build/bootloader/bootloader.elf
+    add-symbol-file /home/thomas/Documents/git/PM3/3_Technical_Documents/Microcontroller/esp_firmware/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /home/thomas/esp/BT_LE/build/BT_LE.elf
+file /home/thomas/Documents/git/PM3/3_Technical_Documents/Microcontroller/esp_firmware/build/esp_firmware.elf

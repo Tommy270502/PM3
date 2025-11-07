@@ -3,14 +3,14 @@ cmake_minimum_required(VERSION 3.16)
 
 if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   file(REMOVE_RECURSE
-  "BT_LE.bin"
-  "BT_LE.map"
   "bootloader/bootloader.bin"
   "bootloader/bootloader.elf"
   "bootloader/bootloader.map"
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
   "esp-idf/mbedtls/x509_crt_bundle"
+  "esp_firmware.bin"
+  "esp_firmware.map"
   "flash_app_args"
   "flash_bootloader_args"
   "flash_project_args"
