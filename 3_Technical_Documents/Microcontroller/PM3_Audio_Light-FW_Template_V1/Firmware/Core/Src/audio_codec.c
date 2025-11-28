@@ -289,6 +289,84 @@ void codec_mirror_left_channel(void) {
 	}
 }
 
+/**
+ * @brief Read ADC value from PF8 (ADC3_IN6) to detect right channel presence.
+ * @return ADC digital value (0-4095 for 12-bit).
+ */
+static uint16_t read_right_channel_adc(void) {
+	static uint8_t adc_initialized = 0;
+	
+	if (!adc_initialized) {
+		// One-time ADC3 initialization
+		__HAL_RCC_ADC3_CLK_ENABLE();
+		
+		ADC3->CR2 &= ~ADC_CR2_ADON;         // Disable ADC
+		ADC3->CR1 &= ~ADC_CR1_RES;          // 12-bit resolution
+		ADC3->CR2 &= ~ADC_CR2_CONT;         // Single conversion mode
+		
+		// Configure channel 6
+		ADC3->SQR3 = 6;                     // Channel 6
+		ADC3->SQR1 = 0;                     // 1 conversion
+		
+		// Set sample time (84 cycles for stable reading)
+		ADC3->SMPR2 &= ~ADC_SMPR2_SMP6_Msk;
+		ADC3->SMPR2 |= (4UL << ADC_SMPR2_SMP6_Pos);
+		
+		ADC3->CR2 |= ADC_CR2_ADON;          // Enable ADC
+		adc_initialized = 1;
+		
+		// Wait for stabilization
+		for(volatile int i = 0; i < 100; i++);
+	}
+	
+	// Start conversion
+	ADC3->CR2 |= ADC_CR2_SWSTART;
+	
+	// Wait for completion
+	while (!(ADC3->SR & ADC_SR_EOC));
+	
+	return (uint16_t)ADC3->DR;
+}
+
+uint8_t codec_is_right_channel_present(void) {
+	#define ADC_THRESHOLD_LOW   100   // ~80mV (100/4095 * 3.3V)
+	#define ADC_THRESHOLD_HIGH  150   // ~120mV (hysteresis)
+	#define DETECTION_COUNT     5     // Number of consecutive readings
+	
+	static uint8_t right_channel_active = 1;  // Assume stereo initially
+	static uint8_t detection_counter = 0;
+	
+	uint16_t adc_value = read_right_channel_adc();
+	uint16_t adc_center = 2048;  // ADC midpoint (GND level with bias)
+	
+	// Calculate distance from center (GND level)
+	int16_t deviation = (int16_t)adc_value - (int16_t)adc_center;
+	if (deviation < 0) deviation = -deviation;
+	
+	// Use hysteresis to prevent rapid switching
+	uint8_t condition_met;
+	
+	if (right_channel_active) {
+		// Currently in stereo mode - check if we should switch to mono
+		condition_met = (deviation < ADC_THRESHOLD_LOW);
+	} else {
+		// Currently in mono mode - check if we should switch to stereo
+		condition_met = (deviation > ADC_THRESHOLD_HIGH);
+	}
+	
+	if (condition_met) {
+		detection_counter++;
+		if (detection_counter >= DETECTION_COUNT) {
+			right_channel_active = !right_channel_active;  // Toggle state
+			detection_counter = 0;
+		}
+	} else {
+		detection_counter = 0;
+	}
+	
+	return right_channel_active;
+}
+
 static void sai_dma_init(void) {
 
 	__HAL_RCC_DMA2_CLK_ENABLE();

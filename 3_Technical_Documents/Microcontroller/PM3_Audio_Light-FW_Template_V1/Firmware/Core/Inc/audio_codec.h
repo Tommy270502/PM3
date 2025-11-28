@@ -136,4 +136,20 @@ void codec_update_output_buffer(uint8_t channel, float32_t *data, uint32_t size)
  */
 void codec_mirror_left_channel(void);
 
+/**
+ * @brief Checks if the right audio channel input is present based on ADC reading.
+ *
+ * This function reads the ADC value from PF8 (ADC3_IN6) which is connected to
+ * the right audio input channel. It detects whether there is an active signal
+ * by measuring deviation from the DC bias level (GND reference). The function
+ * uses hysteresis and consecutive reading requirements to prevent false triggering.
+ *
+ * @return 1 if right channel is active (stereo mode), 0 if only left channel (mono mode).
+ *
+ * @note This function maintains internal state for hysteresis and requires
+ *       multiple consecutive readings before switching modes to ensure stability.
+ *       It is designed to be called periodically in the main audio processing loop.
+ */
+uint8_t codec_is_right_channel_present(void);
+
 #endif

@@ -163,6 +163,12 @@ int main(void) {
 			codec_clear_data_ready();
 			BSP_LED_On(LED4);
 
+			// Check if right channel is present
+			if (!codec_is_right_channel_present()) {
+				// Only left channel detected - mirror it to right for mono output
+				codec_mirror_left_channel();
+			}
+
 			if (efect_active) {
 				// Possibility of a variable effect, switchable on and off via a user button.
 			}
