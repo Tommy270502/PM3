@@ -598,7 +598,7 @@
       "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "PM3_Audio_and_DMX.step",
+      "step": "../../../../../../PM3_Audio_and_DMX.step",
       "svg": "",
       "vrml": ""
     },
