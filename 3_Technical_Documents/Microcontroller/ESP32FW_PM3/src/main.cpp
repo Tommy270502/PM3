@@ -1,49 +1,43 @@
 #include <Arduino.h>
-
-// AudioTools must be included before BluetoothA2DPSink
 #include "AudioTools.h"
 #include "BluetoothA2DPSink.h"
 
 using namespace audio_tools;
 
-// I2S output stream
+// Create I2S output stream
 I2SStream i2s;
 
-// A2DP sink feeding the I2S stream
+// Connect BT sink → I2S output
 BluetoothA2DPSink a2dp_sink(i2s);
 
-// ------ Pin config: ESP32 -> CS4271 (standalone) ------
-static const int I2S_BCLK_PIN = 26;   // to CS4271 SCLK
-static const int I2S_LRCK_PIN = 25;   // to CS4271 LRCK
-static const int I2S_DATA_PIN = 27;   // to CS4271 SDIN (DAC input)
+// ESP32 → STM32 I2S pins
+static const int I2S_BCLK_PIN = 26;   // BCLK -> STM32 BCLK
+static const int I2S_LRCK_PIN = 25;   // LRCLK -> STM32 LRCLK
+static const int I2S_DATA_OUT = 23;   // ESP32 DOUT -> STM32 DIN
+// static const int I2S_DATA_IN = 22; // (optional if STM32 sends back audio)
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
-  Serial.println();
-  Serial.println("ESP32 Bluetooth A2DP -> CS4271 (standalone) via I2S");
+  delay(300);
 
-  // Optional: AudioTools logging
-  AudioLogger::instance().begin(Serial, AudioLogger::Warning);
-
-  // ---- Configure I2S (ESP32 side) ----
-  auto cfg = i2s.defaultConfig();   // default is "output" mode
-  cfg.sample_rate     = 44100;      // A2DP usually 44.1 kHz
-  cfg.bits_per_sample = 16;         // A2DP PCM is 16-bit stereo
+  // ---- Configure I2S TX (ESP32 -> STM32) ----
+  auto cfg = i2s.defaultConfig(TX_MODE);
+  cfg.sample_rate     = 44100;   // A2DP = 44.1kHz
+  cfg.bits_per_sample = 16;      // A2DP output is 16-bit stereo PCM
   cfg.channels        = 2;
-  cfg.pin_bck         = I2S_BCLK_PIN;
-  cfg.pin_ws          = I2S_LRCK_PIN;
-  cfg.pin_data        = I2S_DATA_PIN;
-  cfg.is_master       = true;       // ESP32 provides BCLK/LRCK
+
+  cfg.pin_bck  = I2S_BCLK_PIN;
+  cfg.pin_ws   = I2S_LRCK_PIN;
+  cfg.pin_data = I2S_DATA_OUT;
+
+  cfg.is_master = true;          // ESP32 generates BCLK + LRCLK
 
   i2s.begin(cfg);
 
   // ---- Start Bluetooth A2DP sink ----
-  a2dp_sink.start("ESP32_CS4271_Speaker");
-
-  Serial.println("A2DP sink running. Pair to 'ESP32_CS4271_Speaker' and play music.");
+  a2dp_sink.start("ESP32_to_STM_I2S");
 }
 
 void loop() {
-  // All streaming is handled in background tasks
+  // A2DP + I2S handled internally
 }
