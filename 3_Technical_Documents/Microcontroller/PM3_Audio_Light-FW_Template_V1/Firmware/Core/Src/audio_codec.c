@@ -56,6 +56,24 @@ static uint8_t audio_codec_data_ready = 0;
  */
 static void sai_dma_init(void);
 
+#ifdef AUDIO_INPUT_I2S
+/**
+ * @brief Initializes the I2S2 peripheral for external I2S audio input.
+ *
+ * This static helper function configures SPI2 in I2S slave receive mode
+ * on GPIO pins PB12 (WS), PB13 (SCK), PB14 (SDIN), and PB15 (SDOUT-unused).
+ * It sets up the I2S interface to match the codec format: 24-bit audio
+ * data in 32-bit frames, stereo, with external clock master.
+ *
+ * DMA1 Stream3 Channel 0 is configured for reception using ping-pong
+ * buffering in circular mode.
+ *
+ * @note This function is only compiled when AUDIO_INPUT_I2S is defined.
+ *       It is called by `codec_start()` instead of SAI1 Block A initialization.
+ */
+static void i2s_input_init(void);
+#endif
+
 /**
  * @brief Splits and converts interleaved I²S data into separate float buffers.
  *
@@ -182,10 +200,13 @@ HAL_StatusTypeDef codec_init(float32_t *left_channel_buffer,
 }
 
 void codec_start(void) {
-// Enable peripheral clock for SAI1
+
+#ifndef AUDIO_INPUT_I2S
+	// === CODEC MODE: Configure SAI1 Block A for input from external codec ===
+	// Enable peripheral clock for SAI1
 	RCC->APB2ENR |= RCC_APB2ENR_SAI1EN;
 
-// Disable Block A before configuration
+	// Disable Block A before configuration
 	SAI1_Block_A->CR1 &= ~SAI_xCR1_SAIEN;
 
 	/* --- CR1 --- */
@@ -218,8 +239,16 @@ void codec_start(void) {
 			(1U << SAI_xSLOTR_NBSLOT_Pos) | // Number of slots = 2
 			(2U << SAI_xSLOTR_SLOTSZ_Pos) | // Slot size = 32 bits
 			(0U << SAI_xSLOTR_FBOFF_Pos);   // First bit offset = 0
+#else
+	// === I2S INPUT MODE: Configure I2S2 for input from external I2S device ===
+	i2s_input_init();
+#endif
 
-// Disable Block B before configuration
+	// === Configure SAI1 Block B for output to codec (common to both modes) ===
+	// Enable peripheral clock for SAI1
+	RCC->APB2ENR |= RCC_APB2ENR_SAI1EN;
+
+	// Disable Block B before configuration
 	SAI1_Block_B->CR1 &= ~SAI_xCR1_SAIEN;
 
 	/* --- CR1 --- */
@@ -256,13 +285,18 @@ void codec_start(void) {
 // DMA init
 	sai_dma_init();
 
-// enable sai dma
+#ifndef AUDIO_INPUT_I2S
+	// CODEC MODE: Enable SAI1 Block A RX DMA and SAI blocks
 	SAI1_Block_A->CR1 |= SAI_xCR1_DMAEN; // enable RX DMA
-	SAI1_Block_B->CR1 |= SAI_xCR1_DMAEN; // enable TX DMA
+	SAI1_Block_A->CR1 |= SAI_xCR1_SAIEN; // Enable Block A
+#else
+	// I2S INPUT MODE: Enable I2S2 RX DMA (SPI2 enable done in i2s_input_init)
+	SPI2->CR2 |= SPI_CR2_RXDMAEN; // Enable RX DMA request
+#endif
 
-// Enable SAI blocks
-	SAI1_Block_A->CR1 |= SAI_xCR1_SAIEN;
-	SAI1_Block_B->CR1 |= SAI_xCR1_SAIEN;
+	// Enable SAI1 Block B TX DMA and SAI block (common to both modes)
+	SAI1_Block_B->CR1 |= SAI_xCR1_DMAEN; // enable TX DMA
+	SAI1_Block_B->CR1 |= SAI_xCR1_SAIEN; // Enable Block B
 
 }
 
@@ -329,6 +363,11 @@ static uint16_t read_right_channel_adc(void) {
 }
 
 uint8_t codec_is_right_channel_present(void) {
+#ifdef AUDIO_INPUT_I2S
+	// I2S input mode: Always assume stereo (no jack detection)
+	return 1;
+#else
+	// Codec mode: Use ADC-based right channel detection
 	#define ADC_THRESHOLD_LOW   100   // ~80mV (100/4095 * 3.3V)
 	#define ADC_THRESHOLD_HIGH  150   // ~120mV (hysteresis)
 	#define DETECTION_COUNT     5     // Number of consecutive readings
@@ -365,12 +404,64 @@ uint8_t codec_is_right_channel_present(void) {
 	}
 	
 	return right_channel_active;
+#endif
 }
+
+#ifdef AUDIO_INPUT_I2S
+/**
+ * @brief Initializes the I2S2 peripheral for external I2S audio input.
+ *
+ * Configures SPI2 in I2S slave receive mode on GPIO pins:
+ * - PB12: WS (Word Select / LRCLK)
+ * - PB13: CK (Clock / BCLK)
+ * - PB14: SD (Serial Data Input / SDIN)
+ * - PB15: ext_SD (Serial Data Output / SDOUT - configured but unused)
+ *
+ * I2S format: Philips standard, 24-bit data in 32-bit frames, stereo, slave mode.
+ * External I2S master provides clock and frame sync signals.
+ */
+static void i2s_input_init(void) {
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+	
+	// Enable clocks
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	__HAL_RCC_SPI2_CLK_ENABLE();
+	
+	// Configure GPIO pins for I2S2 alternate function (AF5)
+	GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
+	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+	GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;  // I2S2 uses AF5
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	
+	// Disable SPI2/I2S2 before configuration
+	SPI2->I2SCFGR &= ~SPI_I2SCFGR_I2SE;
+	
+	// Configure I2SCFGR register
+	SPI2->I2SCFGR = 0;  // Reset
+	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SMOD;          // I2S mode (not SPI)
+	SPI2->I2SCFGR |= (3U << SPI_I2SCFGR_I2SCFG_Pos);  // Slave receive mode
+	SPI2->I2SCFGR |= (0U << SPI_I2SCFGR_I2SSTD_Pos);  // Philips I2S standard
+	SPI2->I2SCFGR |= (0U << SPI_I2SCFGR_PCMSYNC_Pos); // Short frame (I2S)
+	SPI2->I2SCFGR |= (2U << SPI_I2SCFGR_DATLEN_Pos);  // 24-bit data length
+	SPI2->I2SCFGR |= (0U << SPI_I2SCFGR_CHLEN_Pos);   // 32-bit channel length
+	SPI2->I2SCFGR |= (0U << SPI_I2SCFGR_CKPOL_Pos);   // Clock polarity low
+	
+	// I2SPR register - not critical in slave mode (master generates clock)
+	SPI2->I2SPR = 0x02;  // Default prescaler
+	
+	// Enable I2S2
+	SPI2->I2SCFGR |= SPI_I2SCFGR_I2SE;
+}
+#endif
 
 static void sai_dma_init(void) {
 
 	__HAL_RCC_DMA2_CLK_ENABLE();
 
+#ifndef AUDIO_INPUT_I2S
+	// === CODEC MODE: Configure DMA2 Stream1 for SAI1 Block A RX ===
 	DMA2_Stream1->CR &= ~DMA_SxCR_EN;   // Disable the DMA stream 1
 	while (DMA2_Stream1->CR & DMA_SxCR_EN) {
 
@@ -378,7 +469,20 @@ static void sai_dma_init(void) {
 
 	// Clear transfer complete interrupt flag
 	DMA2->HIFCR |= DMA_LISR_TCIF1;
+#else
+	// === I2S INPUT MODE: Configure DMA1 Stream3 for I2S2 RX ===
+	__HAL_RCC_DMA1_CLK_ENABLE();
+	
+	DMA1_Stream3->CR &= ~DMA_SxCR_EN;   // Disable the DMA stream 3
+	while (DMA1_Stream3->CR & DMA_SxCR_EN) {
 
+	}   // Wait for DMA to finish
+
+	// Clear transfer complete interrupt flag
+	DMA1->HIFCR |= DMA_LIFCR_CTCIF3;
+#endif
+
+	// === Configure DMA2 Stream5 for SAI1 Block B TX (common to both modes) ===
 	DMA2_Stream5->CR &= ~DMA_SxCR_EN;   // Disable the DMA stream 5
 	while (DMA2_Stream5->CR & DMA_SxCR_EN) {
 
@@ -387,6 +491,7 @@ static void sai_dma_init(void) {
 	// Clear transfer complete interrupt flag
 	DMA2->HIFCR |= DMA_HISR_TCIF5;
 
+#ifndef AUDIO_INPUT_I2S
 	// --- SAI1_Block_A RX (Stream1, Channel0) ---
 	DMA2_Stream1->CR = 0;                       // Reset CR
 
@@ -425,6 +530,60 @@ static void sai_dma_init(void) {
 
 	// Pong Buffer memory address
 	DMA2_Stream1->M1AR = (uint32_t) audio_in_buffer_pong;
+
+	DMA2_Stream1->CR |= DMA_SxCR_EN;   // Enable Stream 1
+
+	// Set NVIC priority and enable interrupt for DMA2 Stream1
+	NVIC_SetPriority(DMA2_Stream1_IRQn, 1); // High priority
+	NVIC_ClearPendingIRQ(DMA2_Stream1_IRQn);
+	NVIC_EnableIRQ(DMA2_Stream1_IRQn);
+#else
+	// --- I2S2 RX (DMA1 Stream3, Channel0) ---
+	DMA1_Stream3->CR = 0;                       // Reset CR
+
+	// Select channel 0 (I2S2_RX)
+	DMA1_Stream3->CR |= (0UL << DMA_SxCR_CHSEL_Pos);
+
+	// Set Priority high (match SAI RX priority)
+	DMA1_Stream3->CR |= DMA_SxCR_PL_1;
+
+	// Memory data size = 32 bit
+	DMA1_Stream3->CR |= DMA_SxCR_MSIZE_1;
+
+	// Peripheral data size = 32 bit
+	DMA1_Stream3->CR |= DMA_SxCR_PSIZE_1;
+
+	// Increment memory address pointer
+	DMA1_Stream3->CR |= DMA_SxCR_MINC;
+
+	// Enable Circular Mode
+	DMA1_Stream3->CR |= DMA_SxCR_CIRC;
+
+	// Enable Double Buffer Mode
+	DMA1_Stream3->CR |= DMA_SxCR_DBM;
+
+	// Transfer complete interrupt enable
+	DMA1_Stream3->CR |= DMA_SxCR_TCIE;
+
+	// Number of data items to transfer
+	DMA1_Stream3->NDTR = AUDIO_FRAME_SIZE;
+
+	// Peripheral register address
+	DMA1_Stream3->PAR = (uint32_t) &(SPI2->DR); // I2S2 data register
+
+	// Ping Buffer memory address
+	DMA1_Stream3->M0AR = (uint32_t) audio_in_buffer_ping;
+
+	// Pong Buffer memory address
+	DMA1_Stream3->M1AR = (uint32_t) audio_in_buffer_pong;
+
+	DMA1_Stream3->CR |= DMA_SxCR_EN;   // Enable Stream 3
+
+	// Set NVIC priority and enable interrupt for DMA1 Stream3
+	NVIC_SetPriority(DMA1_Stream3_IRQn, 1); // High priority (match DMA2_Stream1)
+	NVIC_ClearPendingIRQ(DMA1_Stream3_IRQn);
+	NVIC_EnableIRQ(DMA1_Stream3_IRQn);
+#endif
 
 	// --- SAI1_Block_B TX (Stream5, Channel0) ---
 	DMA2_Stream5->CR = 0;                       // Reset CR
@@ -468,16 +627,12 @@ static void sai_dma_init(void) {
 	// Pong Buffer memory address
 	DMA2_Stream5->M1AR = (uint32_t) audio_out_buffer_pong;
 
-	DMA2_Stream1->CR |= DMA_SxCR_EN;   // Enable Stream
-	DMA2_Stream5->CR |= DMA_SxCR_EN;   // Enable Stream
+	DMA2_Stream5->CR |= DMA_SxCR_EN;   // Enable Stream 5
 
-	// --- Optional: NVIC activate interrupts ---
-
-	NVIC_ClearPendingIRQ(DMA2_Stream1_IRQn);
+	// Set NVIC priority for DMA2 Stream5 (TX - optional interrupt)
+	NVIC_SetPriority(DMA2_Stream5_IRQn, 2); // Lower priority than RX
 	NVIC_ClearPendingIRQ(DMA2_Stream5_IRQn);
-
-	NVIC_EnableIRQ(DMA2_Stream1_IRQn); // RX complete/error
-	//NVIC_EnableIRQ(DMA2_Stream5_IRQn); // TX complete/error
+	//NVIC_EnableIRQ(DMA2_Stream5_IRQn); // TX interrupt disabled by default
 }
 
 static void split_and_cast_i2s_buffer(int32_t *i2s_buffer, float32_t *left_out,
@@ -583,4 +738,71 @@ void DMA2_Stream5_IRQHandler(void) {
 		DMA2->LIFCR |= DMA_HIFCR_CTCIF5; // Clear Transfer Complete Flag
 	}
 }
+
+#ifdef AUDIO_INPUT_I2S
+/**
+ * @brief DMA interrupt handler for I2S2 receive events (I2S input mode only).
+ *
+ * This ISR handles DMA transfer complete events on DMA1 Stream3, which
+ * is used for receiving audio data from external I2S device via I2S2.
+ * It mirrors the functionality of DMA2_Stream1_IRQHandler but for I2S2.
+ *
+ * The handler clears the transfer complete flag, determines which buffer
+ * (ping or pong) has been filled, copies data to output buffer, splits
+ * the interleaved I²S data into separate left/right float channels,
+ * updates the output buffer pointer, and sets the data ready flag.
+ *
+ * @note This function is only compiled and used when AUDIO_INPUT_I2S is defined.
+ */
+void DMA1_Stream3_IRQHandler(void) {
+	if (DMA1->LISR & DMA_LISR_TCIF3) {
+		DMA1->LIFCR |= DMA_LIFCR_CTCIF3; // Clear Transfer Complete Flag
+
+		if ((DMA1_Stream3->CR & DMA_SxCR_CT) == 0) {
+			// data is ready in the "audio_in_buffer_pong"
+
+			// Copy the data to the corresponding out_buffer for the audio loop
+			for (uint32_t i = 0; i < AUDIO_FRAME_SIZE; i++) {
+				next_audio_out_buffer_pointer[i] = audio_in_buffer_pong[i];
+			}
+
+			if ((left_channel_buffer_pointer != 0)
+					&& (right_channel_buffer_pointer != 0)) {
+				// Copy and cast the data to the right_channel_buffer_pointer and left_channel_buffer_pointer
+				split_and_cast_i2s_buffer(audio_in_buffer_pong, 
+					left_channel_buffer_pointer, 
+					right_channel_buffer_pointer, 
+					AUDIO_CHANNEL_SIZE);
+			}
+		} else {
+
+			// data is ready in the "audio_in_buffer_ping"
+
+			// Copy the data to the corresponding out_buffer for the audio loop
+			for (uint32_t i = 0; i < AUDIO_FRAME_SIZE; i++) {
+				next_audio_out_buffer_pointer[i] = audio_in_buffer_ping[i];
+			}
+
+			if ((left_channel_buffer_pointer != 0)
+					&& (right_channel_buffer_pointer != 0)) {
+				// Copy and cast the data to the right_channel_buffer_pointer and left_channel_buffer_pointer
+				split_and_cast_i2s_buffer(audio_in_buffer_ping, 
+					left_channel_buffer_pointer, 
+					right_channel_buffer_pointer, 
+					AUDIO_CHANNEL_SIZE);
+			}
+		}
+		
+		// Toggle output buffer pointer for next DMA cycle
+		if (next_audio_out_buffer_pointer == audio_out_buffer_ping) {
+			next_audio_out_buffer_pointer = audio_out_buffer_pong;
+		} else {
+			next_audio_out_buffer_pointer = audio_out_buffer_ping;
+		}
+		
+		audio_codec_data_ready = 1;
+
+	}
+}
+#endif
 

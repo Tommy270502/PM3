@@ -112,8 +112,7 @@ int main(void) {
 
 	gyro_disable();					// Disable gyro, use those analog inputs
 
-	ret_val = codec_init(left_channel_samples, right_channel_samples,
-	AUDIO_CHANNEL_SIZE);                  // Audio Codec init
+	ret_val = codec_init(left_channel_samples, right_channel_samples, AUDIO_CHANNEL_SIZE);	// Audio Codec init
 	error_handling(ret_val);
 
 	codec_reset();
@@ -163,11 +162,13 @@ int main(void) {
 			codec_clear_data_ready();
 			BSP_LED_On(LED4);
 
-			// Check if right channel is present
+#ifndef AUDIO_INPUT_I2S
+			// Check if right channel is present (codec mode only)
 			if (!codec_is_right_channel_present()) {
 				// Only left channel detected - mirror it to right for mono output
 				codec_mirror_left_channel();
 			}
+#endif
 
 			if (efect_active) {
 				// Possibility of a variable effect, switchable on and off via a user button.
