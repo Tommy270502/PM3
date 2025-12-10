@@ -22,6 +22,7 @@
 #include "stm32f429i_discovery.h"
 #include "stm32f429i_discovery_lcd.h"
 #include "stm32f429i_discovery_ts.h"
+
 #include "core_cm4.h"
 #include <stdio.h>
 
@@ -48,6 +49,7 @@
 
 // Define time_signal_points based on AUDIO_CHANNEL_SIZE, ensuring it's capped at MAX_TIME_SIGNAL_POINTS
 #define TIME_SIGNAL_POINTS (AUDIO_CHANNEL_SIZE > MAX_TIME_SIGNAL_POINTS ? MAX_TIME_SIGNAL_POINTS : AUDIO_CHANNEL_SIZE)
+
 
 /******************************************************************************
  * Variables
@@ -119,6 +121,7 @@ int main(void) {
 
 	codec_start();
 
+
 	DMX_init();                     // Init DMX interf. to LED party panel
 
 	ret_val = calc_init();
@@ -160,7 +163,7 @@ int main(void) {
 
 		if (codec_data_ready()) {
 			codec_clear_data_ready();
-			BSP_LED_On(LED4);
+			//BSP_LED_On(LED4);
 
 #ifndef AUDIO_INPUT_I2S
 			// Check if right channel is present (codec mode only)
@@ -242,7 +245,7 @@ int main(void) {
 				// Should never occur
 				break;
 			}
-			BSP_LED_Off(LED4);
+			//BSP_LED_Off(LED4);
 
 		}
 
