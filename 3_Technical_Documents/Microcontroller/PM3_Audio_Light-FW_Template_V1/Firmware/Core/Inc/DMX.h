@@ -47,6 +47,14 @@ extern uint8_t DMX_data[DMX_CHANNEL_COUNT + 1];
 void DMX_init(void);
 
 /** ***************************************************************************
+ * @brief Set the RGB color in the DMX data buffer
+ * @param red Red value (0..255)
+ * @param green Green value (0..255)
+ * @param blue Blue value (0..255)
+ *****************************************************************************/
+void DMX_setColor(uint8_t red, uint8_t green, uint8_t blue);
+
+/** ***************************************************************************
  * @brief Transmit the DMX data
  *
  * https://en.wikipedia.org/wiki/DMX512#/media/File:Annotated_trace_of_DMX-512_signal.png

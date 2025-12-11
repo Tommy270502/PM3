@@ -180,6 +180,7 @@ int main(void) {
 			// ToDo Use the audio data in left_channel_samples and right_channel_samples for the different calculations.
 
 			// ToDo Set new DMX values
+			DMX_setColor(0, 0, 0);
 
 			disp_refresh = true;      // Tell the display about the new data
 		}
