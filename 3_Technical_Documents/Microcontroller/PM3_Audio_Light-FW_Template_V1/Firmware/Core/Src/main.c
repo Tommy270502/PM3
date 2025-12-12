@@ -258,7 +258,7 @@ int main(void) {
 			}
 			light_avgs[3] = sqrtf(light_avgs[3]);
 
-			// TODO Set new DMX values to light_avgs
+			// Set new DMX values to light_avgs
 			DMX_setColor(
 					(uint8_t)(light_avgs[0] * 255.0f),
 					(uint8_t)(light_avgs[1] * 255.0f),
@@ -314,11 +314,12 @@ int main(void) {
 					disp_curves(spectrum_right, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_BLUE);
 				}
 				break;
-			case MENU_FOUR:
+			case MENU_FOUR: // Effect active
 				if (disp_loop_count_m4++ >= DISP_LOOP_M4) {
 					disp_loop_count_m4 = 0;
 					disp_clear_data();
-					//ToDo ....
+					disp_name_value("Effect Active", (float32_t)efect_active,
+									LCD_COLOR_DARKBLUE, CENTER_MODE);
 				}
 				break;
 			case MENU_FIVE:
