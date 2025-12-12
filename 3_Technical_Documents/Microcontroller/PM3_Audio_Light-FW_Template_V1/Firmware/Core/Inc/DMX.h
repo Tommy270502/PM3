@@ -51,8 +51,9 @@ void DMX_init(void);
  * @param red Red value (0..255)
  * @param green Green value (0..255)
  * @param blue Blue value (0..255)
+ * @param white White value (0..255)
  *****************************************************************************/
-void DMX_setColor(uint8_t red, uint8_t green, uint8_t blue);
+void DMX_setColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t white);
 
 /** ***************************************************************************
  * @brief Transmit the DMX data

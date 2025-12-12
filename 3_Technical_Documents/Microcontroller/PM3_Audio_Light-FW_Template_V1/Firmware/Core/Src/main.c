@@ -58,8 +58,11 @@
 static float32_t left_channel_samples[AUDIO_CHANNEL_SIZE];
 static float32_t right_channel_samples[AUDIO_CHANNEL_SIZE];
 
-static float32_t light_avgs[NUMBER_OF_COLORS] = { 0.10, 0.17, 0.5, 0.8 };
-static float32_t light_peaks[NUMBER_OF_COLORS] = { 0.2, 0.23, 0.75, 0.9 };
+static float32_t spectrum_left[AUDIO_CHANNEL_SIZE / 2];
+static float32_t spectrum_right[AUDIO_CHANNEL_SIZE / 2];
+
+static float32_t light_avgs[NUMBER_OF_COLORS]  = { 0.0, 0.0, 0.0, 0.0 };
+static float32_t light_peaks[NUMBER_OF_COLORS] = { 0.0, 0.0, 0.0, 0.0 };
 
 static uint32_t disp_loop_count_m0; // Loop counter for refreshing display menu 0
 static uint32_t disp_loop_count_m1; // Loop counter for refreshing display menu 1
@@ -177,10 +180,33 @@ int main(void) {
 				// Possibility of a variable effect, switchable on and off via a user button.
 			}
 
-			// ToDo Use the audio data in left_channel_samples and right_channel_samples for the different calculations.
+			// Use the audio data in left_channel_samples and right_channel_samples for the different calculations.
+			ret_val = calc_freq(left_channel_samples, spectrum_left);
+			error_handling(ret_val);
+			ret_val = calc_freq(right_channel_samples, spectrum_right);
+			error_handling(ret_val);
 
-			// ToDo Set new DMX values
-			DMX_setColor(0, 0, 0);
+			// Map frequency data to light averages and peaks for DMX output 
+			/*
+			*   fs  = 48 kHz
+			*   N   = 1024	->  Δf ≈ 46.9 Hz
+			*
+			*   Bass:           < 250 Hz    -> FFT[ 1..  6]
+			*   Low midrange:   250–2 kHz	-> FFT[ 7.. 43]
+			*   Upper midrange:	2–4 kHz     -> FFT[44.. 85]
+			*   Treble:         > 4 kHz     -> FFT[86..511]
+			*/
+			light_avgs[0] = 0.0;
+			light_peaks[0] = 0.0;
+			for (uint16_t i = 1; i <= 6; i++) {
+				light_avgs[0] += spectrum_left[i];
+				if (spectrum_left[i] > light_peaks[0]) {
+					light_peaks[0] = spectrum_left[i];
+				}
+			} // TODO: FIXME
+
+			// TODO Set new DMX values
+			DMX_setColor(0, 0, 0, 0);
 
 			disp_refresh = true;      // Tell the display about the new data
 		}
@@ -193,21 +219,21 @@ int main(void) {
 			switch (MENU_get_active()) {	// Show data for active user menu
 			case MENU_NONE:	// Display help screen
 				break;
-			case MENU_ZERO:
+			case MENU_ZERO:	// Audio level
 				if (disp_loop_count_m0++ >= DISP_LOOP_M0) {
 					disp_loop_count_m0 = 0;
 					disp_clear_data();
-					disp_level(-10, -5, -12, -6);
+					disp_level(-10, -5, -12, -6); // TODO
 				}
 				break;
-			case MENU_ONE:
+			case MENU_ONE:	// Light bars
 				if (disp_loop_count_m1++ >= DISP_LOOP_M1) {
 					disp_loop_count_m1 = 0;
 					disp_clear_data();
 					disp_light_bars(light_avgs, light_peaks);
 				}
 				break;
-			case MENU_TWO:
+			case MENU_TWO:	// Time signal
 				if (disp_loop_count_m2++ >= DISP_LOOP_M2) {
 					disp_loop_count_m2 = 0;
 					disp_clear_data();
@@ -221,11 +247,13 @@ int main(void) {
 							LCD_COLOR_BLUE);
 				}
 				break;
-			case MENU_THREE:
+			case MENU_THREE: // Frequency spectrum
 				if (disp_loop_count_m3++ >= DISP_LOOP_M3) {
 					disp_loop_count_m3 = 0;
 					disp_clear_data();
-					//disp_curves(ToDo, ToDo, 0, 0.05, LCD_COLOR_RED);
+					// Note: x axis is in bins, not in Hz
+					disp_curves(spectrum_left, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_RED);
+					disp_curves(spectrum_right, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_BLUE);
 				}
 				break;
 			case MENU_FOUR:

@@ -63,13 +63,14 @@ void DMX_init(void) {
 	DMX_data[DMX_CHANNEL_OFFSET + 0] = 0;	// Red
 	DMX_data[DMX_CHANNEL_OFFSET + 1] = 0; 	// Green
 	DMX_data[DMX_CHANNEL_OFFSET + 2] = 0;	// Blue
-	DMX_data[DMX_CHANNEL_OFFSET + 3] = 5;
+	DMX_data[DMX_CHANNEL_OFFSET + 3] = 0;	// White
 }
 
-void DMX_setColor(uint8_t red, uint8_t green, uint8_t blue) {
+void DMX_setColor(uint8_t red, uint8_t green, uint8_t blue, uint8_t white) {
 	DMX_data[DMX_CHANNEL_OFFSET + 0] = red;
 	DMX_data[DMX_CHANNEL_OFFSET + 1] = green;
 	DMX_data[DMX_CHANNEL_OFFSET + 2] = blue;
+	DMX_data[DMX_CHANNEL_OFFSET + 3] = white;
 }
 
 void DMX_transmit(void) {

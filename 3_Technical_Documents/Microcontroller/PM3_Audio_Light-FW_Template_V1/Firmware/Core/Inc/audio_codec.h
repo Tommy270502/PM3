@@ -30,7 +30,7 @@
  * To enable I2S input mode, uncomment the define below:
  */
 
-#define AUDIO_INPUT_I2S  // Uncomment to enable external I2S input via PB12-15
+//#define AUDIO_INPUT_I2S  // Uncomment to enable external I2S input via PB12-15
 
 #ifndef AUDIO_CODEC_H_
 #define AUDIO_CODEC_H_
