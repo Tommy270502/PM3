@@ -64,7 +64,7 @@ language.settings.xml
 
 # Eclipse-based IDE launch configurations
 # Uncomment if you want each developer to have their own unique debug configurations
-#*.launch
+*.launch
 
 # JLink-related files (debug configurations)
 # Uncomment if you want each developer to have their own unique debug configurations
