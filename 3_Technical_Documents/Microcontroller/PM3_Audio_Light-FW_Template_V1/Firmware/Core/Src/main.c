@@ -199,14 +199,50 @@ int main(void) {
 			light_avgs[0] = 0.0;
 			light_peaks[0] = 0.0;
 			for (uint16_t i = 1; i <= 6; i++) {
-				light_avgs[0] += spectrum_left[i];
+				light_avgs[0] += powf(spectrum_left[i], 2);
 				if (spectrum_left[i] > light_peaks[0]) {
 					light_peaks[0] = spectrum_left[i];
 				}
-			} // TODO: FIXME
+			}
+			light_avgs[0] = sqrtf(light_avgs[0]);
 
-			// TODO Set new DMX values
-			DMX_setColor(0, 0, 0, 0);
+			light_avgs[1] = 0.0;
+			light_peaks[1] = 0.0;
+			for (uint16_t i = 7; i <= 43; i++) {
+				light_avgs[1] += powf(spectrum_left[i], 2);
+				if (spectrum_left[i] > light_peaks[1]) {
+					light_peaks[1] = spectrum_left[i];
+				}
+			}
+			light_avgs[1] = sqrtf(light_avgs[1]);
+
+			light_avgs[2] = 0.0;
+			light_peaks[2] = 0.0;
+			for (uint16_t i = 44; i <= 85; i++) {
+				light_avgs[2] += powf(spectrum_left[i], 2);
+				if (spectrum_left[i] > light_peaks[2]) {
+					light_peaks[2] = spectrum_left[i];
+				}
+			}
+			light_avgs[2] = sqrtf(light_avgs[2]);
+
+			light_avgs[3] = 0.0;
+			light_peaks[3] = 0.0;
+			for (uint16_t i = 86; i <= 511; i++) {
+				light_avgs[3] += powf(spectrum_left[i], 2);
+				if (spectrum_left[i] > light_peaks[3]) {
+					light_peaks[3] = spectrum_left[i];
+				}
+			}
+			light_avgs[3] = sqrtf(light_avgs[3]);
+
+			// TODO Set new DMX values to light_avgs
+			DMX_setColor(
+					(uint8_t)(light_avgs[0] * 255.0f),
+					(uint8_t)(light_avgs[1] * 255.0f),
+					(uint8_t)(light_avgs[2] * 255.0f),
+					(uint8_t)(light_avgs[3] * 255.0f)
+			);
 
 			disp_refresh = true;      // Tell the display about the new data
 		}
