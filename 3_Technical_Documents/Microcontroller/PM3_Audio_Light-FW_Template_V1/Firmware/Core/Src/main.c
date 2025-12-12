@@ -318,8 +318,48 @@ int main(void) {
 				if (disp_loop_count_m4++ >= DISP_LOOP_M4) {
 					disp_loop_count_m4 = 0;
 					disp_clear_data();
-					char *efect_active_str = efect_active ? "Effect ON" : "Effect OFF";
-					disp_name_value(efect_active_str, 0.0, LCD_COLOR_BLACK, CENTER_MODE);
+					
+					// Visual effect status indicator
+					uint32_t center_x = DISP_WIDTH / 2;
+					uint32_t center_y = DISP_HEIGHT / 2;
+					
+					if (efect_active) {
+						// Effect ON - Green indicator
+						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 40);
+						
+						// White inner circle for contrast
+						BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 30);
+						
+						// Green checkmark circle
+						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 20);
+						
+						// Display text
+						BSP_LCD_SetFont(&Font24);
+						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+						BSP_LCD_DisplayStringAt(0, center_y + 30, (uint8_t*)"EFFECT", CENTER_MODE);
+						BSP_LCD_DisplayStringAt(0, center_y + 55, (uint8_t*)"ACTIVE", CENTER_MODE);
+					} else {
+						// Effect OFF - Red indicator
+						BSP_LCD_SetTextColor(LCD_COLOR_RED);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 40);
+						
+						// White inner circle for contrast
+						BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 30);
+						
+						// Red X circle
+						BSP_LCD_SetTextColor(LCD_COLOR_RED);
+						BSP_LCD_FillCircle(center_x, center_y - 30, 20);
+						
+						// Display text
+						BSP_LCD_SetFont(&Font24);
+						BSP_LCD_SetTextColor(LCD_COLOR_RED);
+						BSP_LCD_DisplayStringAt(0, center_y + 30, (uint8_t*)"EFFECT", CENTER_MODE);
+						BSP_LCD_DisplayStringAt(0, center_y + 55, (uint8_t*)"INACTIVE", CENTER_MODE);
+					}
 				}
 				break;
 			case MENU_FIVE:
