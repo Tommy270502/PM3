@@ -34,6 +34,7 @@
 #include "display.h"
 #include "DMX.h"
 #include "audio_codec.h"
+#include "filters.h"
 
 /******************************************************************************
  * Defines
@@ -72,6 +73,10 @@ static uint32_t disp_loop_count_m4;
 static bool disp_refresh;			///< Display should be refreshed
 
 static uint8_t efect_active = 0;
+
+/* Simple demo: one biquad per channel (same coefficients) */
+static biquad_df2t_t fxL;
+static biquad_df2t_t fxR;
 
 /******************************************************************************
  * Functions
@@ -124,6 +129,21 @@ int main(void) {
 
 	codec_start();
 
+	/* --------------------------------------------------------------------
+	 * Audio effect configuration (biquad)
+	 *
+	 * Notes:
+	 * - fs must match the *actual* audio stream sample-rate.
+	 *   In CODEC mode (CS4271) this is typically 48 kHz.
+	 * - Q controls resonance / bandwidth. Q=0.707 is a good general default.
+	 * -------------------------------------------------------------------- */
+	const float32_t fs = 48000.0f;          /* adjust if your stream is different */
+	const float32_t f0 = 500.0f;           /* cutoff/center frequency [Hz] */
+	const float32_t Q  = 0.707f;            /* Butterworth-ish */
+	biquad_config(&fxL, FILTER_LOWPASS, fs, f0, Q);
+	biquad_config(&fxR, FILTER_LOWPASS, fs, f0, Q);
+	biquad_reset(&fxL);
+	biquad_reset(&fxR);
 
 	DMX_init();                     // Init DMX interf. to LED party panel
 
@@ -177,28 +197,14 @@ int main(void) {
 #endif
 
 			if (efect_active) {
-			    // 1st-order IIR low-pass filter: y[n] = y[n-1] + a * (x[n] - y[n-1])
-			    // Choose cutoff frequency (Hz)
-			    const float32_t fc = 1000.0f;      // <-- adjust to taste
-			    const float32_t fs = 48000.0f;     // your codec sample rate
-
-			    // Compute coefficient (one-pole RC low-pass, matched via exponential)
-			    // a = 1 - exp(-2*pi*fc/fs)
-			    const float32_t a = 1.0f - expf(-2.0f * (float32_t)M_PI * fc / fs);
-
-			    // Filter state must persist across blocks
-			    static float32_t yL = 0.0f;
-			    static float32_t yR = 0.0f;
-
-			    for (uint32_t n = 0; n < AUDIO_CHANNEL_SIZE; n++) {
-			        // Left
-			        yL = yL + a * (left_channel_samples[n] - yL);
-			        left_channel_samples[n] = yL;
-
-			        // Right
-			        yR = yR + a * (right_channel_samples[n] - yR);
-			        right_channel_samples[n] = yR;
-			    }
+				/*
+				 * Apply the configured biquad to each channel in-place.
+				 *
+				 * To switch effects, call biquad_config(&fxL, TYPE, fs, f0, Q)
+				 * and biquad_config(&fxR, TYPE, fs, f0, Q) elsewhere.
+				 */
+				biquad_process_buffer(&fxL, left_channel_samples, AUDIO_CHANNEL_SIZE);
+				biquad_process_buffer(&fxR, right_channel_samples, AUDIO_CHANNEL_SIZE);
 			}
 
 
