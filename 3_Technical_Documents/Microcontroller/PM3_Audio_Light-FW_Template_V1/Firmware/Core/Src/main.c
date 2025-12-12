@@ -177,8 +177,30 @@ int main(void) {
 #endif
 
 			if (efect_active) {
-				// Possibility of a variable effect, switchable on and off via a user button.
+			    // 1st-order IIR low-pass filter: y[n] = y[n-1] + a * (x[n] - y[n-1])
+			    // Choose cutoff frequency (Hz)
+			    const float32_t fc = 1000.0f;      // <-- adjust to taste
+			    const float32_t fs = 48000.0f;     // your codec sample rate
+
+			    // Compute coefficient (one-pole RC low-pass, matched via exponential)
+			    // a = 1 - exp(-2*pi*fc/fs)
+			    const float32_t a = 1.0f - expf(-2.0f * (float32_t)M_PI * fc / fs);
+
+			    // Filter state must persist across blocks
+			    static float32_t yL = 0.0f;
+			    static float32_t yR = 0.0f;
+
+			    for (uint32_t n = 0; n < AUDIO_CHANNEL_SIZE; n++) {
+			        // Left
+			        yL = yL + a * (left_channel_samples[n] - yL);
+			        left_channel_samples[n] = yL;
+
+			        // Right
+			        yR = yR + a * (right_channel_samples[n] - yR);
+			        right_channel_samples[n] = yR;
+			    }
 			}
+
 
 			// Use the audio data in left_channel_samples and right_channel_samples for the different calculations.
 			ret_val = calc_freq(left_channel_samples, spectrum_left);
