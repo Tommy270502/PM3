@@ -318,8 +318,8 @@ int main(void) {
 				if (disp_loop_count_m4++ >= DISP_LOOP_M4) {
 					disp_loop_count_m4 = 0;
 					disp_clear_data();
-					disp_name_value("Effect Active", (float32_t)efect_active,
-									LCD_COLOR_DARKBLUE, CENTER_MODE);
+					char *efect_active_str = efect_active ? "Effect ON" : "Effect OFF";
+					disp_name_value(efect_active_str, 0.0, LCD_COLOR_BLACK, CENTER_MODE);
 				}
 				break;
 			case MENU_FIVE:
