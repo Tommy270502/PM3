@@ -64,8 +64,8 @@ static const uint32_t MENU_empty_slot_text_color = LCD_COLOR_DARKGRAY;	///< Empt
 
 static MENU_entry_t MENU_entry[MENU_TOTAL_ENTRIES] =
 {
-{ "Level", "Meter",
-LCD_COLOR_BLACK, LCD_COLOR_LIGHTBLUE },
+{ "Info", "Screen",
+LCD_COLOR_BLACK, LCD_COLOR_LIGHTYELLOW },
 { "Amb.", "Light",
 LCD_COLOR_BLACK, LCD_COLOR_LIGHTGREEN },
 { "Time", "Signal",
@@ -74,6 +74,8 @@ LCD_COLOR_BLACK, LCD_COLOR_LIGHTRED },
 LCD_COLOR_BLACK, LCD_COLOR_LIGHTCYAN },
 { "Effect", "Menu",
 LCD_COLOR_BLACK, LCD_COLOR_LIGHTMAGENTA },
+{ "Level", "Meter",
+LCD_COLOR_BLACK, LCD_COLOR_LIGHTBLUE },
 { "Peak", "Detect",
 LCD_COLOR_BLACK, LCD_COLOR_ORANGE },
 { "Phase", "Meter",
@@ -158,29 +160,6 @@ void MENU_draw(void)
     BSP_LCD_SetTextColor(arrow_text_color);
     BSP_LCD_DisplayStringAt(x + 3 * m, y + h / 2 - 6,
                             (uint8_t*) MENU_arrow_right_text, LEFT_MODE);
-}
-
-/** ***************************************************************************
- * @brief Shows a hint at startup.
- *
- *****************************************************************************/
-void MENU_hint(void)
-{
-    BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
-    BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-    BSP_LCD_SetFont(&Font20);
-    BSP_LCD_DisplayStringAt(5, 10, (uint8_t*) "Audio Processing", LEFT_MODE);
-    BSP_LCD_DisplayStringAt(5, 30, (uint8_t*) "Ambient Light", LEFT_MODE);
-    BSP_LCD_SetFont(&Font16);
-    BSP_LCD_DisplayStringAt(5, 60, (uint8_t*) "--------------------", LEFT_MODE);
-    BSP_LCD_DisplayStringAt(5, 80, (uint8_t*) "PM3 Student Template",
-                            LEFT_MODE);
-    BSP_LCD_DisplayStringAt(5, 110, (uint8_t*) "Touch a menu item for",
-                            LEFT_MODE);
-    BSP_LCD_DisplayStringAt(5, 130, (uint8_t*) "each visualization", LEFT_MODE);
-
-    BSP_LCD_DisplayStringAt(5, 160, (uint8_t*) "--------------------", LEFT_MODE);
-    BSP_LCD_DisplayStringAt(5, 200, (uint8_t*) "Version 24.09.2025", LEFT_MODE);
 }
 
 /** ***************************************************************************

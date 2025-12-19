@@ -224,7 +224,14 @@ void disp_light_bars(float32_t avgs[], float32_t peaks[])
     }
 }
 
-
+/** ***************************************************************************
+ * @brief Display Audio Level Meter
+ *
+ * @param[in] avg_l  average left channel
+ * @param[in] peak_l peak left channel
+ * @param[in] avg_r  average right channel
+ * @param[in] peak_r peak right channel
+ *****************************************************************************/
 void disp_level(float32_t avg_l, float32_t peak_l, float32_t avg_r,
              float32_t peak_r)
 {
@@ -303,5 +310,26 @@ void disp_level(float32_t avg_l, float32_t peak_l, float32_t avg_r,
         BSP_LCD_FillRect(posx, d_height - posy, (posxdelta - 1), peaky);
 
     }
+}
+
+/** ***************************************************************************
+ * @brief Display info screen
+ *
+ *****************************************************************************/
+void disp_info(void)
+{
+    BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+    BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+    BSP_LCD_SetFont(&Font20);
+    BSP_LCD_DisplayStringAt(5, 10, (uint8_t*) "Audio Processing", LEFT_MODE);
+    BSP_LCD_DisplayStringAt(5, 30, (uint8_t*) "Ambient Light", LEFT_MODE);
+    BSP_LCD_SetFont(&Font16);
+    BSP_LCD_DisplayStringAt(5, 60, (uint8_t*) "--------------------", LEFT_MODE);
+    BSP_LCD_DisplayStringAt(5, 80, (uint8_t*) "Authors:", LEFT_MODE);
+    BSP_LCD_DisplayStringAt(5, 110, (uint8_t*) "Bogdans Grebnevs", LEFT_MODE);
+    BSP_LCD_DisplayStringAt(5, 130, (uint8_t*) "Thomas Perri", LEFT_MODE);
+
+    BSP_LCD_DisplayStringAt(5, 160, (uint8_t*) "--------------------", LEFT_MODE);
+    BSP_LCD_DisplayStringAt(5, 200, (uint8_t*) "Version 19.12.2025", LEFT_MODE);
 }
 

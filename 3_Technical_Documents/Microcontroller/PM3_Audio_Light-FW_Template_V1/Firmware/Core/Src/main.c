@@ -39,11 +39,17 @@
 /******************************************************************************
  * Defines
  *****************************************************************************/
-#define DISP_LOOP_M0 	4	// Prevent flicker, delay refreshing display menu 0
-#define DISP_LOOP_M1 	4	// Prevent flicker, delay refreshing display menu 1
+// Display refresh loop limits for each menu (to prevent flicker)
+#define DISP_LOOP_M0 	10	// Info screen
+#define DISP_LOOP_M1 	4	// Light bars
 #define DISP_LOOP_M2 	10  // Time signal
-#define DISP_LOOP_M3 	4
-#define DISP_LOOP_M4 	4
+#define DISP_LOOP_M3 	4	// Spectrum analyzer
+#define DISP_LOOP_M4 	4	// Effect Menu (Filter Selection)
+#define DISP_LOOP_M5 	4	// Audio level
+#define DISP_LOOP_M6 	4	// ...
+#define DISP_LOOP_M7 	4	// ...
+#define DISP_LOOP_M8 	4	// ...
+#define DISP_LOOP_M9 	4	// ...
 
 // Define the maximum number of points for the time signal (Display 240 x 320 pixels)
 #define MAX_TIME_SIGNAL_POINTS 240
@@ -123,7 +129,7 @@ int main(void) {
 	BSP_LED_Init(LED4);					// Is toggled by user button
 
 	MENU_draw();						// Draw the menu
-	MENU_hint();						// Show hint at startup
+	disp_info();						// Show info menu at startup
 
 	gyro_disable();					// Disable gyro, use those analog inputs
 
@@ -312,11 +318,11 @@ int main(void) {
 			switch (MENU_get_active()) {	// Show data for active user menu
 			case MENU_NONE:	// Display help screen
 				break;
-			case MENU_ZERO:	// Audio level
+			case MENU_ZERO:	// Info screen
 				if (disp_loop_count[MENU_ZERO]++ >= DISP_LOOP_M0) {
 					disp_loop_count[MENU_ZERO] = 0;
 					disp_clear_data();
-					disp_level(-10, -5, -12, -6); // TODO
+					disp_info();
 				}
 				break;
 			case MENU_ONE:	// Light bars
@@ -349,7 +355,7 @@ int main(void) {
 					disp_curves(spectrum_right, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_BLUE);
 				}
 				break;
-			case MENU_FOUR:	// Filter Selection
+			case MENU_FOUR:	// Effect Menu (Filter Selection)
 				if (disp_loop_count[MENU_FOUR]++ >= DISP_LOOP_M4) {
 					disp_loop_count[MENU_FOUR] = 0;
 					disp_clear_data();
@@ -377,7 +383,13 @@ int main(void) {
 					}
 				}
 				break;
-			case MENU_FIVE:
+			case MENU_FIVE:	// Audio level
+				if (disp_loop_count[MENU_FIVE]++ >= DISP_LOOP_M5) {
+					disp_loop_count[MENU_FIVE] = 0;
+					disp_clear_data();
+					disp_level(-10, -5, -12, -6); // TODO
+				}
+				break;
 			case MENU_SIX:
 			case MENU_SEVEN:
 			case MENU_EIGHT:
