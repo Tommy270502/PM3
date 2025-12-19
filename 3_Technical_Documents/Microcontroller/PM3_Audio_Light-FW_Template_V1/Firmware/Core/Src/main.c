@@ -62,21 +62,26 @@ static float32_t right_channel_samples[AUDIO_CHANNEL_SIZE];
 static float32_t spectrum_left[AUDIO_CHANNEL_SIZE / 2];
 static float32_t spectrum_right[AUDIO_CHANNEL_SIZE / 2];
 
-static float32_t light_avgs[NUMBER_OF_COLORS]  = { 0.0, 0.0, 0.0, 0.0 };
-static float32_t light_peaks[NUMBER_OF_COLORS] = { 0.0, 0.0, 0.0, 0.0 };
+static float32_t light_avgs[NUMBER_OF_COLORS];
+static float32_t light_peaks[NUMBER_OF_COLORS];
 
-static uint32_t disp_loop_count_m0; // Loop counter for refreshing display menu 0
-static uint32_t disp_loop_count_m1; // Loop counter for refreshing display menu 1
-static uint32_t disp_loop_count_m2;
-static uint32_t disp_loop_count_m3;
-static uint32_t disp_loop_count_m4;
+static uint32_t disp_loop_count[MENU_TOTAL_ENTRIES] = {0}; // Loop counters for refreshing display menus
 static bool disp_refresh;			///< Display should be refreshed
 
 static uint8_t efect_active = 0;
 
-/* Simple demo: one biquad per channel (same coefficients) */
-static biquad_df2t_t fxL;
-static biquad_df2t_t fxR;
+/* Multi-filter system: 5 types per channel (preconfigured) */
+static biquad_df2t_t fxL[5];
+static biquad_df2t_t fxR[5];
+static uint8_t current_filter_index = 0;  // Start with FILTER_BYPASS (no effect)
+
+static const char* filter_names[] = {
+	"BYPASS",
+	"LOWPASS",
+	"HIGHPASS",
+	"BANDPASS",
+	"NOTCH"
+};
 
 /******************************************************************************
  * Functions
@@ -132,6 +137,7 @@ int main(void) {
 	/* --------------------------------------------------------------------
 	 * Audio effect configuration (biquad)
 	 *
+	 * Pre-configure all 5 filter types for instant switching.
 	 * Notes:
 	 * - fs must match the *actual* audio stream sample-rate.
 	 *   In CODEC mode (CS4271) this is typically 48 kHz.
@@ -140,10 +146,18 @@ int main(void) {
 	const float32_t fs = 48000.0f;          /* adjust if your stream is different */
 	const float32_t f0 = 500.0f;           /* cutoff/center frequency [Hz] */
 	const float32_t Q  = 0.707f;            /* Butterworth-ish */
-	biquad_config(&fxL, FILTER_LOWPASS, fs, f0, Q);
-	biquad_config(&fxR, FILTER_LOWPASS, fs, f0, Q);
-	biquad_reset(&fxL);
-	biquad_reset(&fxR);
+	
+	// Initialize all filter types
+	for (uint8_t i = 0; i < 5; i++) {
+		filter_type_t type = (filter_type_t)i;  // FILTER_BYPASS=0, LOWPASS=1, etc.
+		biquad_config(&fxL[i], type, fs, f0, Q);
+		biquad_config(&fxR[i], type, fs, f0, Q);
+		biquad_reset(&fxL[i]);
+		biquad_reset(&fxR[i]);
+	}
+	
+	// Set initial effect state (active for LOWPASS)
+	efect_active = (current_filter_index != FILTER_BYPASS);
 
 	DMX_init();                     // Init DMX interf. to LED party panel
 
@@ -181,7 +195,20 @@ int main(void) {
 		}
 
 		if (PB_pressed()) {				// Check if user pushbutton was pressed
-			efect_active = !efect_active;
+			// Cycle through filter types
+			current_filter_index = (current_filter_index + 1) % 5;
+			
+			// Reset filter state to avoid artifacts from previous filter
+			biquad_reset(&fxL[current_filter_index]);
+			biquad_reset(&fxR[current_filter_index]);
+			
+			// Update effect active flag (false only for BYPASS)
+			efect_active = (current_filter_index != FILTER_BYPASS);
+
+			// Show current filter on LCD
+			disp_refresh = true;
+			// Force immediate display refresh by resetting loop counter
+			disp_loop_count[MENU_FOUR] = DISP_LOOP_M4;
 		}
 
 		if (codec_data_ready()) {
@@ -198,13 +225,11 @@ int main(void) {
 
 			if (efect_active) {
 				/*
-				 * Apply the configured biquad to each channel in-place.
-				 *
-				 * To switch effects, call biquad_config(&fxL, TYPE, fs, f0, Q)
-				 * and biquad_config(&fxR, TYPE, fs, f0, Q) elsewhere.
+				 * Apply the currently selected biquad filter to each channel in-place.
+				 * BYPASS mode skips processing entirely via efect_active flag.
 				 */
-				biquad_process_buffer(&fxL, left_channel_samples, AUDIO_CHANNEL_SIZE);
-				biquad_process_buffer(&fxR, right_channel_samples, AUDIO_CHANNEL_SIZE);
+				biquad_process_buffer(&fxL[current_filter_index], left_channel_samples, AUDIO_CHANNEL_SIZE);
+				biquad_process_buffer(&fxR[current_filter_index], right_channel_samples, AUDIO_CHANNEL_SIZE);
 			}
 
 			// Update codec output buffer with processed audio samples
@@ -288,22 +313,22 @@ int main(void) {
 			case MENU_NONE:	// Display help screen
 				break;
 			case MENU_ZERO:	// Audio level
-				if (disp_loop_count_m0++ >= DISP_LOOP_M0) {
-					disp_loop_count_m0 = 0;
+				if (disp_loop_count[MENU_ZERO]++ >= DISP_LOOP_M0) {
+					disp_loop_count[MENU_ZERO] = 0;
 					disp_clear_data();
 					disp_level(-10, -5, -12, -6); // TODO
 				}
 				break;
 			case MENU_ONE:	// Light bars
-				if (disp_loop_count_m1++ >= DISP_LOOP_M1) {
-					disp_loop_count_m1 = 0;
+				if (disp_loop_count[MENU_ONE]++ >= DISP_LOOP_M1) {
+					disp_loop_count[MENU_ONE] = 0;
 					disp_clear_data();
 					disp_light_bars(light_avgs, light_peaks);
 				}
 				break;
 			case MENU_TWO:	// Time signal
-				if (disp_loop_count_m2++ >= DISP_LOOP_M2) {
-					disp_loop_count_m2 = 0;
+				if (disp_loop_count[MENU_TWO]++ >= DISP_LOOP_M2) {
+					disp_loop_count[MENU_TWO] = 0;
 					disp_clear_data();
 					disp_curves(left_channel_samples, TIME_SIGNAL_POINTS,
 							-(1 << (CODEC_ADC_RES - 1)) / 2,
@@ -316,59 +341,39 @@ int main(void) {
 				}
 				break;
 			case MENU_THREE: // Frequency spectrum
-				if (disp_loop_count_m3++ >= DISP_LOOP_M3) {
-					disp_loop_count_m3 = 0;
+				if (disp_loop_count[MENU_THREE]++ >= DISP_LOOP_M3) {
+					disp_loop_count[MENU_THREE] = 0;
 					disp_clear_data();
 					// Note: x axis is in bins, not in Hz
 					disp_curves(spectrum_left, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_RED);
 					disp_curves(spectrum_right, AUDIO_CHANNEL_SIZE / 2, 0, 0.05, LCD_COLOR_BLUE);
 				}
 				break;
-			case MENU_FOUR: // Effect active
-				if (disp_loop_count_m4++ >= DISP_LOOP_M4) {
-					disp_loop_count_m4 = 0;
+			case MENU_FOUR:	// Filter Selection
+				if (disp_loop_count[MENU_FOUR]++ >= DISP_LOOP_M4) {
+					disp_loop_count[MENU_FOUR] = 0;
 					disp_clear_data();
 					
-					// Visual effect status indicator
-					uint32_t center_x = DISP_WIDTH / 2;
-					uint32_t center_y = DISP_HEIGHT / 2;
+					// Display full-screen filter list with color highlighting for active filter
+					BSP_LCD_SetFont(&Font24);
 					
-					if (efect_active) {
-						// Effect ON - Green indicator
-						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 40);
+					// Calculate vertical spacing for 5 filters (280px height / 5 = 56px per item)
+					const uint32_t start_y = 28;  // Start position (half spacing)
+					const uint32_t spacing = 56;   // Vertical spacing between items
+					
+					// Display all 5 filter types
+					for (uint8_t i = 0; i < 5; i++) {
+						uint32_t y_pos = start_y + (i * spacing);
 						
-						// White inner circle for contrast
-						BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 30);
+						// Set color: green for active filter, grey for others
+						if (i == current_filter_index) {
+							BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+						} else {
+							BSP_LCD_SetTextColor(LCD_COLOR_LIGHTGRAY);
+						}
 						
-						// Green checkmark circle
-						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 20);
-						
-						// Display text
-						BSP_LCD_SetFont(&Font24);
-						BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-						BSP_LCD_DisplayStringAt(0, center_y + 30, (uint8_t*)"EFFECT", CENTER_MODE);
-						BSP_LCD_DisplayStringAt(0, center_y + 55, (uint8_t*)"ACTIVE", CENTER_MODE);
-					} else {
-						// Effect OFF - Red indicator
-						BSP_LCD_SetTextColor(LCD_COLOR_RED);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 40);
-						
-						// White inner circle for contrast
-						BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 30);
-						
-						// Red X circle
-						BSP_LCD_SetTextColor(LCD_COLOR_RED);
-						BSP_LCD_FillCircle(center_x, center_y - 30, 20);
-						
-						// Display text
-						BSP_LCD_SetFont(&Font24);
-						BSP_LCD_SetTextColor(LCD_COLOR_RED);
-						BSP_LCD_DisplayStringAt(0, center_y + 30, (uint8_t*)"EFFECT", CENTER_MODE);
-						BSP_LCD_DisplayStringAt(0, center_y + 55, (uint8_t*)"INACTIVE", CENTER_MODE);
+						// Display filter name centered
+						BSP_LCD_DisplayStringAt(0, y_pos, (uint8_t*)filter_names[i], CENTER_MODE);
 					}
 				}
 				break;
